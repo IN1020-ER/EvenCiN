@@ -1,0 +1,204 @@
+{
+  "actors": [
+    {
+      "id": "act-estudante",
+      "text": "Estudante",
+      "type": "istar.Role",
+      "x": 150,
+      "y": 150,
+      "nodes": []
+    },
+    {
+      "id": "act-organizador",
+      "text": "Organizador do Evento",
+      "type": "istar.Role",
+      "x": 650,
+      "y": 150,
+      "nodes": []
+    },
+    {
+      "id": "act-gestao",
+      "text": "Direção e Coordenação",
+      "type": "istar.Role",
+      "x": 650,
+      "y": 550,
+      "nodes": []
+    },
+    {
+      "id": "act-comunidade",
+      "text": "Comunidade Externa",
+      "type": "istar.Role",
+      "x": 150,
+      "y": 550,
+      "nodes": []
+    },
+    {
+      "id": "act-plataforma",
+      "text": "Plataforma Comercial Externa",
+      "type": "istar.Agent",
+      "x": 1150,
+      "y": 150,
+      "nodes": []
+    }
+  ],
+  "orphans": [],
+  "dependencies": [
+    {
+      "id": "dep-divulgacao",
+      "text": "Divulgar evento nos canais informais",
+      "type": "istar.Goal",
+      "x": 400,
+      "y": 100,
+      "source": "act-estudante",
+      "target": "act-organizador"
+    },
+    {
+      "id": "dep-certificado",
+      "text": "Certificado em papel/e-mail",
+      "type": "istar.Resource",
+      "x": 400,
+      "y": 200,
+      "source": "act-estudante",
+      "target": "act-organizador"
+    },
+    {
+      "id": "dep-lista-presenca",
+      "text": "Preencher lista de presença manual",
+      "type": "istar.Task",
+      "x": 400,
+      "y": 280,
+      "source": "act-organizador",
+      "target": "act-estudante"
+    },
+    {
+      "id": "dep-gestao-inscricao",
+      "text": "Gerenciar inscrições e pagamentos",
+      "type": "istar.Task",
+      "x": 900,
+      "y": 150,
+      "source": "act-organizador",
+      "target": "act-plataforma"
+    },
+    {
+      "id": "dep-relatorio-evento",
+      "text": "Relatório manual de eventos de extensão",
+      "type": "istar.Resource",
+      "x": 650,
+      "y": 350,
+      "source": "act-gestao",
+      "target": "act-organizador"
+    },
+    {
+      "id": "dep-acesso-externo",
+      "text": "Identificar eventos abertos ao público",
+      "type": "istar.Goal",
+      "x": 400,
+      "y": 450,
+      "source": "act-comunidade",
+      "target": "act-organizador"
+    },
+    {
+      "id": "dep-validacao-aac",
+      "text": "Validar Atividades Acadêmicas (AAC)",
+      "type": "istar.Goal",
+      "x": 400,
+      "y": 550,
+      "source": "act-estudante",
+      "target": "act-gestao"
+    }
+  ],
+  "links": [
+    {
+      "id": "lnk-div-1",
+      "type": "istar.DependencyLink",
+      "source": "act-estudante",
+      "target": "dep-divulgacao"
+    },
+    {
+      "id": "lnk-div-2",
+      "type": "istar.DependencyLink",
+      "source": "dep-divulgacao",
+      "target": "act-organizador"
+    },
+    {
+      "id": "lnk-cert-1",
+      "type": "istar.DependencyLink",
+      "source": "act-estudante",
+      "target": "dep-certificado"
+    },
+    {
+      "id": "lnk-cert-2",
+      "type": "istar.DependencyLink",
+      "source": "dep-certificado",
+      "target": "act-organizador"
+    },
+    {
+      "id": "lnk-lista-1",
+      "type": "istar.DependencyLink",
+      "source": "act-organizador",
+      "target": "dep-lista-presenca"
+    },
+    {
+      "id": "lnk-lista-2",
+      "type": "istar.DependencyLink",
+      "source": "dep-lista-presenca",
+      "target": "act-estudante"
+    },
+    {
+      "id": "lnk-gest-1",
+      "type": "istar.DependencyLink",
+      "source": "act-organizador",
+      "target": "dep-gestao-inscricao"
+    },
+    {
+      "id": "lnk-gest-2",
+      "type": "istar.DependencyLink",
+      "source": "dep-gestao-inscricao",
+      "target": "act-plataforma"
+    },
+    {
+      "id": "lnk-rel-1",
+      "type": "istar.DependencyLink",
+      "source": "act-gestao",
+      "target": "dep-relatorio-evento"
+    },
+    {
+      "id": "lnk-rel-2",
+      "type": "istar.DependencyLink",
+      "source": "dep-relatorio-evento",
+      "target": "act-organizador"
+    },
+    {
+      "id": "lnk-ext-1",
+      "type": "istar.DependencyLink",
+      "source": "act-comunidade",
+      "target": "dep-acesso-externo"
+    },
+    {
+      "id": "lnk-ext-2",
+      "type": "istar.DependencyLink",
+      "source": "dep-acesso-externo",
+      "target": "act-organizador"
+    },
+    {
+      "id": "lnk-aac-1",
+      "type": "istar.DependencyLink",
+      "source": "act-estudante",
+      "target": "dep-validacao-aac"
+    },
+    {
+      "id": "lnk-aac-2",
+      "type": "istar.DependencyLink",
+      "source": "dep-validacao-aac",
+      "target": "act-gestao"
+    }
+  ],
+  "display": {},
+  "tool": "pistar.1.1.0",
+  "istar": "2.0",
+  "saveDate": "Fri, 18 Sep 2026 12:00:00 GMT",
+  "diagram": {
+    "width": 2000,
+    "height": 2000
+  }
+}
