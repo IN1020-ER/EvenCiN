@@ -1,0 +1,144 @@
+Abaixo está o **Meta-Prompt** estruturado para a geração do modelo de **Dependências Estratégicas (SD - Strategic Dependency)** utilizando a notação **i* (iStar 2.0 / i-start)**, configurado especificamente para o problema do ecossistema de eventos do CIn-UFPE (**EvenCIn**).
+
+---
+
+# 🤖 META-PROMPT PARA GERAÇÃO DO MODELO SD (iStar 2.0)
+
+*(Copie o bloco abaixo para instruir qualquer LLM a gerar o modelo final de Requisitos Orientado a Objetivos)*
+
+```text
+PROMPT DE INSTRUÇÃO: MODELAGEM DE DEPENDÊNCIAS ESTRATÉGICAS (SD) EM i* PARA O SISTEMA EvenCIn
+
+1. PAPEL E ATUAÇÃO
+Você é um Especialista em Engenharia de Requisitos Orientada a Objetivos (Goal-Oriented Requirements Engineering - GORE) e perito na notação e framework i* (iStar 2.0). Sua tarefa é construir um Modelo de Dependências Estratégicas (SD - Strategic Dependency) detalhado e formal para a plataforma "EvenCIn" (Ecossistema Integrado de Eventos do CIn-UFPE).
+
+2. FUNDAMENTOS DA NOTAÇÃO i* (iStar 2.0) A SEREM SEGUIDOS RIGOROSAMENTE:
+- Atores (Actors):
+  * Agent: Ator com existência concreta ou física (ex.: indivíduos humanos específicos, sistemas de software ou departamentos formais).
+  * Role: Caracterização abstrata de comportamento dentro de um domínio específico.
+  * Actor: Usado de forma genérica quando a distinção entre Agent e Role não for crítica.
+  * Relacionamentos entre Atores:
+    - `is-a`: Generalização/especialização (ex.: Role -> Role ou Actor -> Actor).
+    - `participates-in`: Qualquer outra associação (ex.: Agent plays Role ou subcomponente part-of).
+
+- Elementos Intencionais / Tipos de Dependum (Objeto da Dependência):
+  * Goal (Meta): Estado de coisas que o ator deseja alcançar e possui critério claro de conclusão (Ex.: "Inscrição em evento realizada"). Dá liberdade ao Dependee sobre como realizar.
+  * Quality (Qualidade / Softgoal): Atributo ou critério desejado sem critério de conclusão binário explícito (Ex.: "Divulgação centralizada", "Emissão rápida de certificado"). Guia a satisfação do objetivo.
+  * Task (Tarefa): Ação que deve ser executada de uma forma prescrita e específica (Ex.: "Realizar check-in via QR Code").
+  * Resource (Recurso): Entidade física ou informacional necessária e disponibilizada (Ex.: "Certificado em PDF autenticado", "Histórico de participação formatado para AAC").
+
+- Estrutura da Dependência (Tupla de 5 elementos):
+  [Depender] ---> (Dependum) ---> [Dependee]
+  (Opcionalmente contendo DependerElmt e DependeeElmt no detalhamento).
+
+3. CONTEXTO DO PROBLEMA E MOTIVAÇÃO (SISTEMA EvenCIn):
+- Contexto: O CIn-UFPE possui uma agenda densa de atividades diárias (palestras, defesas de teses/dissertações, hackathons, workshops, meetups e SECIN).
+- Problemas Identificados:
+  1. Divulgação Dispersa: Eventos se perdem em e-mails institucionais, murais físicos, redes sociais e grupos de WhatsApp sem um canal único e confiável.
+  2. Burocracia nas Horas Complementares (AAC): A comprovação de participação para validação de Atividades Acadêmicas Complementares é um processo lento e vulnerável à perda de papéis/e-mails.
+  3. Trabalho Manual e Repetitivo dos Organizadores: Listas de presença em papel, planilhas manuais e envio individual de certificados por e-mail consomem muitas horas de professores, PET e diretórios acadêmicos.
+  4. Falta de Integração Acadêmica: Ferramentas comerciais (Sympla, Doity) não validam autenticidade para disciplinas nem se integram às regras do CIn.
+  5. Barreira de Acesso e Gestão: Dificuldade para a comunidade externa e falta de métricas consolidadas para a direção do CIn.
+
+4. ATORES PRINCIPAIS A SEREM MODELADOS:
+- Estudante CIn (Agent/Role): Deseja encontrar eventos facilmente, validar horas AAC e emitir certificados sem burocracia.
+- Organizador de Evento (Role): Deseja automatizar chamadas, simplificar inscrições e emitir certificados automaticamente.
+- Sistema EvenCIn (Agent): Plataforma web/mobile que provê centralização, credenciamento via QR Code e automação de certificados/relatórios.
+- Comunidade Externa / Visitante (Role): Deseja identificar e se inscrever em eventos abertos ao público.
+- Direção / Coordenação do CIn (Agent): Deseja métricas de impacto e relatórios consolidados de eventos de extensão.
+
+5. TAREFAS DE SAÍDA ESPERADAS:
+Gere uma resposta técnica estruturada nas seguintes seções:
+
+SEÇÃO 1: Mapeamento de Atores e Links de Associação
+- Tabela identificando cada Ator, seu Tipo (Agent/Role/Actor) e relacionamentos (`is-a`, `participates-in`).
+
+SEÇÃO 2: Tabela Formal de Dependências Estratégicas (SD)
+- Tabela com as colunas:
+  1. Depender (Quem depende)
+  2. Dependum (Nome do elemento intencional)
+  3. Tipo do Dependum (Goal, Quality, Task, Resource)
+  4. Dependee (Quem fornece)
+  5. Problema Mitigado (Conexão explícita com as dores de divulgação, certificados, AAC ou trabalho manual)
+
+SEÇÃO 3: Representação Diagramática / Sintaxe Textual (pUML / PlantUML / Mermaid)
+- Código sintático legível que represente visualmente o grafo de atores e dependências do modelo SD i*.
+
+SEÇÃO 4: Justificativa das Escolhas de Modelagem
+- Explicação do porquê certas dependências foram modeladas como Goal vs Task vs Resource vs Quality com base na liberdade dada ao Dependee.
+
+```
+
+---
+
+# 📋 EXEMPLO DE EXECUÇÃO DO META-PROMPT
+
+Para demonstrar o funcionamento e validar as instruções, segue a saída esperada ao aplicar o meta-prompt acima:
+
+### SEÇÃO 1: Mapeamento de Atores e Links de Associação
+
+| Ator | Tipo de Ator | Descrição / Papel no Contexto | Assoc. (`is-a` / `participates-in`) |
+| --- | --- | --- | --- |
+| **Estudante CIn** | `Agent` | Aluno de graduação/pós com vínculo institucional.
+
+ | `is-a` Participant
+
+ |
+| **Comunidade Externa** | `Role` | Visitante ou profissional sem vínculo direto com a UFPE.
+
+ | `is-a` Participant
+
+ |
+| **Organizador de Evento** | `Role` | Professor, PET, DA ou servidor responsável pela gestão do evento.
+
+ | - |
+| **Sistema EvenCIn** | `Agent` | Plataforma web/mobile que centraliza a gestão.
+
+ | - |
+| **Direção / Coordenação** | `Agent` | Órgão gestor que avalia impacto e valida AACs.
+
+ | - |
+
+---
+
+### SEÇÃO 2: Tabela Formal de Dependências Estratégicas (SD)
+
+| Depender (Quem depende)
+
+ | Dependum (Objeto)
+
+ | Tipo do Dependum
+
+ | Dependee (Provedor)
+
+ | Problema / Motivação Mitigada
+
+ |
+| --- | --- | --- | --- | --- |
+| **Estudante CIn** | Divulgação Centralizada de Eventos | **Quality** | **Sistema EvenCIn** | Fim da dispersão de eventos em e-mails e WhatsApp.
+
+ |
+| **Estudante CIn** | Inscrição em Evento Realizada | **Goal** | **Sistema EvenCIn** | Facilidade de acesso e garantia de vaga.
+
+ |
+| **Estudante CIn** | Certificado em PDF Autenticado | **Resource** | **Sistema EvenCIn** | Elimina a perda de certificados e demora na entrega.
+
+ |
+| **Estudante CIn** | Histórico Formatado para AAC | **Resource** | **Sistema EvenCIn** | Reduz a burocracia no envio de comprovações de carga horária.
+
+ |
+| **Organizador** | Automatizar Emissão de Certificados | **Goal** | **Sistema EvenCIn** | Elimina a tarefa manual e repetitiva de envio individual por e-mail.
+
+ |
+| **Organizador** | Realizar Check-in via QR Code | **Task** | **Sistema EvenCIn** | Substitui listas de presença físicas em papel por validação ágil.
+
+ |
+| **Organizador** | Confirmar Frequência de Participante | **Task** | **Estudante CIn** | Permite a liberação automática do certificado pós-evento.
+
+ |
+| **Comunidade Externa** | Acesso Simplificado a Eventos Abertos | **Quality** | **Sistema EvenCIn** | Remove a barreira de entrada para quem não possui credencial UFPE.
+
+ |
+| **Direção / Coordenação** | Dashboard de Impacto e Frequência | **Resource** | **Sistema EvenCIn** | Soluciona a falta de dados e métricas para tomada de decisão e prestação de contas.
+
+ |
