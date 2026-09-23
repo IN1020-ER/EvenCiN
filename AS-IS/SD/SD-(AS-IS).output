@@ -1,0 +1,98 @@
+No modelo de Engenharia de Requisitos orientada a objetos do **i* (iStar 2.0)**, o modelo **AS-IS** descreve o estado atual do domínio **antes/sem a introdução do sistema proposto (EvenCIn)**.
+
+No estado atual, o ecossistema de eventos do CIn-UFPE depende de processos manuais, documentos em papel, e-mails pulverizados, ferramentas genéricas (Google Forms, Sympla) e envio descentralizado de comprovantes.
+
+---
+
+# 🏛️ MODELO DE DEPENDÊNCIAS ESTRATÉGICAS (SD) — CENÁRIO AS-IS (ESTADO ATUAL)
+
+---
+
+### SEÇÃO 1: Mapeamento de Atores e Canais do Cenário AS-IS
+
+| Ator / Entidade | Tipo de Ator | Papel e Atuação no Estado Atual (AS-IS) |
+| --- | --- | --- |
+| **Estudante CIn** | `Agent` | Busca eventos no CIn, assina listas físicas, aguarda certificados e submete comprovantes para validação de AAC. |
+| **Organizador de Evento** | `Role` | Professor, PET, DA ou aluno organizador responsável por divulgar, coletar presenças em papel e confeccionar certificados via mala direta. |
+| **Coordenação / Comissão de AAC** | `Agent` | Analisa e valida manualmente a carga horária de Atividades Acadêmicas Complementares enviadas pelos alunos. |
+| **Canais Descentralizados** | `Role` | Canais informais ou genéricos de comunicação (Mailing list institucional, grupos de WhatsApp/Telegram, redes sociais, murais). |
+| **Plataformas de Formulários** | `Role` | Ferramentas genéricas de terceiros (Google Forms, Sympla, Doity) usadas isoladamente para cadastro prévio. |
+| **Direção / Secretaria do CIn** | `Agent` | Necessita de dados consolidáveis de extensão para relatórios institucionais e órgãos de fomento. |
+
+---
+
+### SEÇÃO 2: Tabela Formal de Dependências Estratégicas AS-IS (iStar 2.0)
+
+| Depender (Quem depende) | Dependum (Objeto) | Tipo do Dependum | Dependee (Quem fornece) | Vulnerabilidade / Gargalo no AS-IS |
+| --- | --- | --- | --- | --- |
+| **Estudante CIn** | Divulgação de Eventos | **Quality** | **Canais Descentralizados** | Alta dispersão. Eventos são perdidos no excesso de mensagens e e-mails não lidos. |
+| **Estudante CIn** | Inscrição em Evento Efetuada | **Goal** | **Plataformas de Formulários** | Preenchimento repetitivo de formulários sem vínculo automático com o cadastro acadêmico. |
+| **Estudante CIn** | Certificado de Participação | **Resource** | **Organizador de Evento** | Longos atrasos, extravio em *spam* ou esquecimento de envio por parte do organizador. |
+| **Estudante CIn** | Validar Carga Horária de AAC | **Goal** | **Coordenação de AAC** | Processo moroso e burocrático de abertura de solicitações e envio de anexos avulsos. |
+| **Organizador** | Divulgar Informações do Evento | **Task** | **Canais Descentralizados** | Trabalho braçal de publicar o mesmo anúncio em múltiplos grupos e murais sem garantia de alcance. |
+| **Organizador** | Assinar Lista de Presença em Papel | **Task** | **Estudante CIn** | Filas na entrada de auditórios, caligrafia ilegível e risco de perda do documento físico. |
+| **Organizador** | Transcrever Presenças para Planilha | **Task** | **Monitor / Apoio do Evento** | Atividade manual propensa a erros de digitação (nomes, e-mails e CPFs incorretos). |
+| **Organizador** | Confeccionar e Enviar Certificados | **Task** | **Mala Direta / E-mail** | Falhas na geração em lote, bloqueio por filtros de *spam* e necessidade de reenvios individuais. |
+| **Coordenação de AAC** | Comprovante de Participação | **Resource** | **Estudante CIn** | Ausência de validação rápida de autenticidade; risco de documentos adulterados. |
+| **Direção do CIn** | Relatório Consolidado de Extensão | **Resource** | **Organizador de Evento** | Relatórios entregues fora do prazo, dados incompletos ou inexistência de histórico centralizado. |
+
+---
+
+### SEÇÃO 3: Representação em Sintaxe Textual (PlantUML / iStar AS-IS)
+
+```plantuml
+@startuml
+skinparam actorStyle solid
+
+' Atores e Entidades do Estado Atual (AS-IS)
+actor "Estudante CIn" as Est <<Agent>>
+actor "Organizador de Evento" as Org <<Role>>
+actor "Coordenação / Comissão de AAC" as Coord <<Agent>>
+actor "Direção do CIn" as Dir <<Agent>>
+
+node "Canais Descentralizados\n(WhatsApp / E-mail / Murais)" as Canais <<Role>>
+node "Plataformas de Formulários\n(Google Forms / Sympla)" as Forms <<Role>>
+
+' Dependências do Estudante no AS-IS
+Est ..> (Quality: Divulgação de Eventos)
+(Quality: Divulgação de Eventos) ..> Canais
+
+Est ..> (Goal: Inscrição em Evento Efetuada)
+(Goal: Inscrição em Evento Efetuada) ..> Forms
+
+Est ..> (Resource: Certificado de Participação)
+(Resource: Certificado de Participação) ..> Org
+
+Est ..> (Goal: Validar Carga Horária de AAC)
+(Goal: Validar Carga Horária de AAC) ..> Coord
+
+' Dependências do Organizador no AS-IS
+Org ..> (Task: Divulgar Informações do Evento)
+(Task: Divulgar Informações do Evento) ..> Canais
+
+Org ..> (Task: Assinar Lista de Presença em Papel)
+(Task: Assinar Lista de Presença em Papel) ..> Est
+
+' Dependência da Coordenação de AAC e Direção no AS-IS
+Coord ..> (Resource: Comprovante de Participação)
+(Resource: Comprovante de Participação) ..> Est
+
+Dir ..> (Resource: Relatório Consolidado de Extensão)
+(Resource: Relatório Consolidado de Extensão) ..> Org
+
+@end
+
+```
+
+---
+
+### SEÇÃO 4: Análise das Vulnerabilidades do Modelo AS-IS (Motivação para o TO-BE)
+
+1. **Gargalo de Comunicação (Dependência de Canais Descentralizados)**:
+A dependência de uma meta de qualidade (*Divulgação de Eventos*) em relação a canais não estruturados faz com que alunos frequentemente não fiquem sabendo das atividades acadêmicas a tempo.
+2. **Carga Operacional Excessiva no Organizador (Dependência de Tasks Manuais)**:
+O organizador acumula tarefas puramente operacionais (*Assinar Lista em Papel*, *Transcrever Presenças*, *Enviar Certificados por Mala Direta*). A falha em qualquer uma dessas tarefas gera insatisfação direta nos participantes.
+3. **Insegurança e Burocracia na Validação de AAC (Dependência de Recurso Físico/PDF Avulso)**:
+A *Coordenação de AAC* depende do *Estudante CIn* para obter comprovantes individuais. A ausência de uma base unificada obriga a verificação manual caso a caso, aumentando o tempo de deferimento.
+4. **Invisibilidade Institucional (Dependência de Relatórios Manuais)**:
+A *Direção do CIn* depende de relatórios elaborados ad-hoc pelos organizadores, o que resulta em perda de métricas reais sobre o impacto da extensão e frequência nos eventos do centro.
