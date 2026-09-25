@@ -1,0 +1,232 @@
+{
+  "actors": [
+    {
+      "id": "act-organizador",
+      "text": "Organizador do Evento",
+      "type": "istar.Role",
+      "x": 600,
+      "y": 150,
+      "nodes": [
+        {
+          "id": "node-org-g1",
+          "text": "Realizar Apresentação do Evento",
+          "type": "istar.Goal",
+          "x": 650,
+          "y": 200
+        },
+        {
+          "id": "node-org-t1",
+          "text": "Conduzir Apresentação Presencial",
+          "type": "istar.Task",
+          "x": 650,
+          "y": 300
+        },
+        {
+          "id": "node-org-t2",
+          "text": "Reservar Sala/Auditório no CIn",
+          "type": "istar.Task",
+          "x": 520,
+          "y": 420
+        },
+        {
+          "id": "node-org-t3",
+          "text": "Divulgar Apresentação em Canais Informais",
+          "type": "istar.Task",
+          "x": 650,
+          "y": 420
+        },
+        {
+          "id": "node-org-t4",
+          "text": "Coletar Presença Manualmente",
+          "type": "istar.Task",
+          "x": 780,
+          "y": 420
+        },
+        {
+          "id": "node-org-q1",
+          "text": "Divulgação Eficiente [Não Alcançada]",
+          "type": "istar.Quality",
+          "x": 520,
+          "y": 530
+        },
+        {
+          "id": "node-org-q2",
+          "text": "Baixo Esforço Operacional [Não Alcançado]",
+          "type": "istar.Quality",
+          "x": 780,
+          "y": 530
+        }
+      ]
+    },
+    {
+      "id": "act-estudante",
+      "text": "Estudante / Participante",
+      "type": "istar.Role",
+      "x": 100,
+      "y": 150,
+      "nodes": [
+        {
+          "id": "node-est-g1",
+          "text": "Participar da Apresentação do Evento",
+          "type": "istar.Goal",
+          "x": 150,
+          "y": 200
+        },
+        {
+          "id": "node-est-t1",
+          "text": "Comparecer ao Local do Evento",
+          "type": "istar.Task",
+          "x": 150,
+          "y": 300
+        },
+        {
+          "id": "node-est-t2",
+          "text": "Assinar Lista de Presença em Papel",
+          "type": "istar.Task",
+          "x": 150,
+          "y": 410
+        },
+        {
+          "id": "node-est-q1",
+          "text": "Acesso Rápido à Informação do Evento [Não Alcançado]",
+          "type": "istar.Quality",
+          "x": 150,
+          "y": 520
+        }
+      ]
+    }
+  ],
+  "orphans": [],
+  "dependencies": [
+    {
+      "id": "dep-sessao",
+      "text": "Sessão de Apresentação",
+      "type": "istar.Task",
+      "x": 400,
+      "y": 200,
+      "source": "act-estudante",
+      "target": "act-organizador"
+    },
+    {
+      "id": "dep-lista-presenca",
+      "text": "Lista de Presença Assinada",
+      "type": "istar.Resource",
+      "x": 400,
+      "y": 320,
+      "source": "act-organizador",
+      "target": "act-estudante"
+    },
+    {
+      "id": "dep-certificado-papel",
+      "text": "Declaração/Certificado Manual",
+      "type": "istar.Resource",
+      "x": 400,
+      "y": 440,
+      "source": "act-estudante",
+      "target": "act-organizador"
+    }
+  ],
+  "links": [
+    {
+      "id": "lnk-ref-1",
+      "type": "istar.AndRefinementLink",
+      "source": "node-org-t1",
+      "target": "node-org-g1"
+    },
+    {
+      "id": "lnk-ref-2",
+      "type": "istar.AndRefinementLink",
+      "source": "node-org-t2",
+      "target": "node-org-t1"
+    },
+    {
+      "id": "lnk-ref-3",
+      "type": "istar.AndRefinementLink",
+      "source": "node-org-t3",
+      "target": "node-org-t1"
+    },
+    {
+      "id": "lnk-ref-4",
+      "type": "istar.AndRefinementLink",
+      "source": "node-org-t4",
+      "target": "node-org-t1"
+    },
+    {
+      "id": "lnk-ref-5",
+      "type": "istar.AndRefinementLink",
+      "source": "node-est-t1",
+      "target": "node-est-g1"
+    },
+    {
+      "id": "lnk-ref-6",
+      "type": "istar.AndRefinementLink",
+      "source": "node-est-t2",
+      "target": "node-est-t1"
+    },
+    {
+      "id": "lnk-contrib-1",
+      "type": "istar.ContributionLink",
+      "source": "node-org-t3",
+      "target": "node-org-q1",
+      "label": "hurt"
+    },
+    {
+      "id": "lnk-contrib-2",
+      "type": "istar.ContributionLink",
+      "source": "node-org-t4",
+      "target": "node-org-q2",
+      "label": "hurt"
+    },
+    {
+      "id": "lnk-contrib-3",
+      "type": "istar.ContributionLink",
+      "source": "node-est-t2",
+      "target": "node-est-q1",
+      "label": "hurt"
+    },
+    {
+      "id": "lnk-dep-1a",
+      "type": "istar.DependencyLink",
+      "source": "act-estudante",
+      "target": "dep-sessao"
+    },
+    {
+      "id": "lnk-dep-1b",
+      "type": "istar.DependencyLink",
+      "source": "dep-sessao",
+      "target": "act-organizador"
+    },
+    {
+      "id": "lnk-dep-2a",
+      "type": "istar.DependencyLink",
+      "source": "act-organizador",
+      "target": "dep-lista-presenca"
+    },
+    {
+      "id": "lnk-dep-2b",
+      "type": "istar.DependencyLink",
+      "source": "dep-lista-presenca",
+      "target": "act-estudante"
+    },
+    {
+      "id": "lnk-dep-3a",
+      "type": "istar.DependencyLink",
+      "source": "act-estudante",
+      "target": "dep-certificado-papel"
+    },
+    {
+      "id": "lnk-dep-3b",
+      "type": "istar.DependencyLink",
+      "source": "dep-certificado-papel",
+      "target": "act-organizador"
+    }
+  ],
+  "display": {},
+  "tool": "pistar.1.1.0",
+  "istar": "2.0",
+  "saveDate": "Fri, 25 Sep 2026 11:34:00 GMT",
+  "diagram": {
+    "width": 2000,
+    "height": 2000
+  }
+}
