@@ -2,231 +2,1266 @@
   "actors": [
     {
       "id": "act-organizador",
-      "text": "Organizador do Evento",
+      "text": "Organizador",
       "type": "istar.Role",
-      "x": 600,
-      "y": 150,
+      "x": 730,
+      "y": 380,
       "nodes": [
         {
-          "id": "node-org-g1",
-          "text": "Realizar Apresentação do Evento",
+          "id": "org-node-g1",
+          "text": "Realizar Evento Acadêmico",
           "type": "istar.Goal",
-          "x": 650,
-          "y": 200
+          "x": 730,
+          "y": 320
         },
         {
-          "id": "node-org-t1",
-          "text": "Conduzir Apresentação Presencial",
+          "id": "org-node-t1",
+          "text": "Gerenciar Ciclo do Evento",
           "type": "istar.Task",
-          "x": 650,
-          "y": 300
+          "x": 730,
+          "y": 370
         },
         {
-          "id": "node-org-t2",
-          "text": "Reservar Sala/Auditório no CIn",
+          "id": "org-node-t2",
+          "text": "Solicitar Local e Horário",
           "type": "istar.Task",
-          "x": 520,
+          "x": 830,
           "y": 420
         },
         {
-          "id": "node-org-t3",
-          "text": "Divulgar Apresentação em Canais Informais",
+          "id": "org-node-t3",
+          "text": "Divulgar Evento nos Canais",
           "type": "istar.Task",
-          "x": 650,
-          "y": 420
+          "x": 930,
+          "y": 310
         },
         {
-          "id": "node-org-t4",
+          "id": "org-node-t4",
           "text": "Coletar Presença Manualmente",
           "type": "istar.Task",
-          "x": 780,
-          "y": 420
+          "x": 620,
+          "y": 450
         },
         {
-          "id": "node-org-q1",
-          "text": "Divulgação Eficiente [Não Alcançada]",
-          "type": "istar.Quality",
+          "id": "org-node-t5",
+          "text": "Emitir Certificados Manualmente",
+          "type": "istar.Task",
           "x": 520,
-          "y": 530
+          "y": 350
         },
         {
-          "id": "node-org-q2",
-          "text": "Baixo Esforço Operacional [Não Alcançado]",
+          "id": "org-node-r1",
+          "text": "Lista de Presença em Papel",
+          "type": "istar.Resource",
+          "x": 580,
+          "y": 500
+        },
+        {
+          "id": "org-node-q1",
+          "text": "Baixa Visibilidade dos Espaços Disponíveis",
           "type": "istar.Quality",
           "x": 780,
-          "y": 530
+          "y": 580
         }
       ]
     },
     {
-      "id": "act-estudante",
-      "text": "Estudante / Participante",
+      "id": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "text": "Estudante",
       "type": "istar.Role",
-      "x": 100,
-      "y": 150,
+      "x": 401,
+      "y": 549,
       "nodes": [
         {
-          "id": "node-est-g1",
-          "text": "Participar da Apresentação do Evento",
+          "id": "est-node-g1",
+          "text": "Participar do Evento",
           "type": "istar.Goal",
-          "x": 150,
-          "y": 200
+          "x": 450,
+          "y": 480
         },
         {
-          "id": "node-est-t1",
-          "text": "Comparecer ao Local do Evento",
+          "id": "est-node-t1",
+          "text": "Realizar Inscrição no Evento",
           "type": "istar.Task",
-          "x": 150,
+          "x": 300,
+          "y": 430
+        },
+        {
+          "id": "est-node-t2",
+          "text": "Preencher Lista de Presença Manual",
+          "type": "istar.Task",
+          "x": 500,
+          "y": 520
+        },
+        {
+          "id": "est-node-g2",
+          "text": "Completar Horas do AAC",
+          "type": "istar.Goal",
+          "x": 400,
+          "y": 620
+        },
+        {
+          "id": "est-node-t3",
+          "text": "Solicitar Lançamento de AAC",
+          "type": "istar.Task",
+          "x": 280,
+          "y": 680
+        },
+        {
+          "id": "est-node-t4",
+          "text": "Visualizar Horas de AAC",
+          "type": "istar.Task",
+          "x": 550,
+          "y": 680
+        },
+        {
+          "id": "est-node-q1",
+          "text": "Lenta Entrega do Certificado",
+          "type": "istar.Quality",
+          "x": 520,
+          "y": 580
+        },
+        {
+          "id": "est-node-q2",
+          "text": "Lenta Validação das Atividades Acadêmicas",
+          "type": "istar.Quality",
+          "x": 350,
+          "y": 740
+        }
+      ]
+    },
+    {
+      "id": "6a7b81ee-2f40-46dc-8340-d7530777e671",
+      "text": "Secretaria Graduação",
+      "type": "istar.Agent",
+      "x": 176,
+      "y": 921,
+      "nodes": [
+        {
+          "id": "sec-node-g1",
+          "text": "Atribuir Horas de AAC do Estudante",
+          "type": "istar.Goal",
+          "x": 250,
+          "y": 880
+        },
+        {
+          "id": "sec-node-t1",
+          "text": "Validar Atividades Acadêmicas Complementares (AAC)",
+          "type": "istar.Task",
+          "x": 180,
+          "y": 820
+        },
+        {
+          "id": "sec-node-t2",
+          "text": "Atualizar Horas AAC no SIGAA",
+          "type": "istar.Task",
+          "x": 320,
+          "y": 950
+        },
+        {
+          "id": "sec-node-r1",
+          "text": "Histórico Acadêmico",
+          "type": "istar.Resource",
+          "x": 120,
+          "y": 860
+        },
+        {
+          "id": "sec-node-q1",
+          "text": "Usabilidade Ruim",
+          "type": "istar.Quality",
+          "x": 300,
+          "y": 1010
+        }
+      ]
+    },
+    {
+      "id": "1f284167-caa6-477b-9e88-46e5651266d2",
+      "text": "Gestão Infraestrutura",
+      "type": "istar.Actor",
+      "x": 926,
+      "y": 726,
+      "nodes": [
+        {
+          "id": "inf-node-g1",
+          "text": "Aprovação da Realização de Evento",
+          "type": "istar.Goal",
+          "x": 920,
+          "y": 660
+        },
+        {
+          "id": "inf-node-t1",
+          "text": "Alocar Local e Horário do Evento",
+          "type": "istar.Task",
+          "x": 920,
+          "y": 720
+        },
+        {
+          "id": "inf-node-r1",
+          "text": "Espaço",
+          "type": "istar.Resource",
+          "x": 860,
+          "y": 760
+        }
+      ]
+    },
+    {
+      "id": "5a634453-fcbb-4146-ae8b-3bf0023ff57a",
+      "text": "Comunidade Externa",
+      "type": "istar.Agent",
+      "x": 821,
+      "y": 50,
+      "nodes": [
+        {
+          "id": "ext-node-g1",
+          "text": "Identificar Eventos Abertos ao Público",
+          "type": "istar.Goal",
+          "x": 820,
+          "y": 20
+        },
+        {
+          "id": "ext-node-t1",
+          "text": "Acessar Portal Cin",
+          "type": "istar.Task",
+          "x": 820,
+          "y": 80
+        }
+      ]
+    },
+    {
+      "id": "35ddd945-fd3b-4b91-90b6-5c82b5197bf7",
+      "text": "Plataforma de Inscrição",
+      "type": "istar.Actor",
+      "x": 157,
+      "y": 270,
+      "nodes": [
+        {
+          "id": "pi-node-g1",
+          "text": "Inscrever no Evento",
+          "type": "istar.Goal",
+          "x": 180,
+          "y": 230
+        },
+        {
+          "id": "pi-node-t1",
+          "text": "Disponibilizar Formulário de Inscrição",
+          "type": "istar.Task",
+          "x": 120,
+          "y": 290
+        },
+        {
+          "id": "pi-node-r1",
+          "text": "Dados Pessoais",
+          "type": "istar.Resource",
+          "x": 220,
           "y": 300
         },
         {
-          "id": "node-est-t2",
-          "text": "Assinar Lista de Presença em Papel",
-          "type": "istar.Task",
-          "x": 150,
-          "y": 410
-        },
-        {
-          "id": "node-est-q1",
-          "text": "Acesso Rápido à Informação do Evento [Não Alcançado]",
+          "id": "pi-node-q1",
+          "text": "Baixa Proteção de Dados",
           "type": "istar.Quality",
           "x": 150,
-          "y": 520
+          "y": 340
         }
       ]
+    },
+    {
+      "id": "2245c270-59f8-4525-b2dc-6c4a896adc57",
+      "text": "Plataforma Mídia",
+      "type": "istar.Actor",
+      "x": 1186,
+      "y": 427,
+      "nodes": [
+        {
+          "id": "pm-node-t1",
+          "text": "Publicar Postagem",
+          "type": "istar.Task",
+          "x": 1180,
+          "y": 380
+        },
+        {
+          "id": "pm-node-r1",
+          "text": "Mídia",
+          "type": "istar.Resource",
+          "x": 1240,
+          "y": 440
+        },
+        {
+          "id": "pm-node-q1",
+          "text": "Baixo Engajamento",
+          "type": "istar.Quality",
+          "x": 1120,
+          "y": 440
+        }
+      ]
+    },
+    {
+      "id": "c91f1e2e-f060-49d4-a725-ce785d06f857",
+      "text": "SIGAA",
+      "type": "istar.Actor",
+      "x": 786,
+      "y": 981,
+      "nodes": [
+        {
+          "id": "sig-node-g1",
+          "text": "Registrar Histórico de AAC",
+          "type": "istar.Goal",
+          "x": 780,
+          "y": 920
+        },
+        {
+          "id": "sig-node-t1",
+          "text": "Atualizar Horas AAC do Estudante",
+          "type": "istar.Task",
+          "x": 720,
+          "y": 980
+        },
+        {
+          "id": "sig-node-r1",
+          "text": "Horas da AAC de Participação no Evento",
+          "type": "istar.Resource",
+          "x": 840,
+          "y": 980
+        },
+        {
+          "id": "sig-node-q1",
+          "text": "Baixa Usabilidade",
+          "type": "istar.Quality",
+          "x": 780,
+          "y": 1040
+        }
+      ]
+    },
+    {
+      "id": "834ada88-effe-4aeb-9cf1-b7590953eddf",
+      "text": "Módulo Ensino",
+      "type": "istar.Actor",
+      "x": 930,
+      "y": 978,
+      "nodes": []
+    },
+    {
+      "id": "d28146c3-528a-4a66-a044-5b38d6caadb6",
+      "text": "Instagram",
+      "type": "istar.Actor",
+      "x": 1315,
+      "y": 469,
+      "nodes": []
+    },
+    {
+      "id": "50e439d6-08ad-40fc-b0a6-53f044fc4f23",
+      "text": "Facebook",
+      "type": "istar.Actor",
+      "x": 1328,
+      "y": 299,
+      "nodes": []
+    },
+    {
+      "id": "d4789f97-ce7e-4a2e-abaf-c2e0a6b29c49",
+      "text": "Pós-Graduação",
+      "type": "istar.Role",
+      "x": 204,
+      "y": 559,
+      "nodes": []
+    },
+    {
+      "id": "d246275e-2e87-4e10-b12a-9f4efb0ca305",
+      "text": "Google Forms",
+      "type": "istar.Actor",
+      "x": 50,
+      "y": 228,
+      "nodes": []
+    },
+    {
+      "id": "b81ce6f1-b063-4bbd-b34c-278c0b4de5e7",
+      "text": "Microsoft Forms",
+      "type": "istar.Actor",
+      "x": 144,
+      "y": 153,
+      "nodes": []
     }
   ],
   "orphans": [],
   "dependencies": [
     {
-      "id": "dep-sessao",
-      "text": "Sessão de Apresentação",
-      "type": "istar.Task",
-      "x": 400,
-      "y": 200,
-      "source": "act-estudante",
+      "id": "dep-divulgacao",
+      "text": "Participar do evento",
+      "type": "istar.Goal",
+      "x": 556,
+      "y": 360,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "act-organizador"
+    },
+    {
+      "id": "dep-certificado",
+      "text": "Certificado em papel/e-mail",
+      "type": "istar.Resource",
+      "x": 493,
+      "y": 293,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
       "target": "act-organizador"
     },
     {
       "id": "dep-lista-presenca",
-      "text": "Lista de Presença Assinada",
-      "type": "istar.Resource",
-      "x": 400,
-      "y": 320,
+      "text": "Preencher lista de presença manual",
+      "type": "istar.Task",
+      "x": 570,
+      "y": 455,
       "source": "act-organizador",
-      "target": "act-estudante"
+      "target": "f66f3abc-419c-48ed-9f08-000d56cc0084"
     },
     {
-      "id": "dep-certificado-papel",
-      "text": "Declaração/Certificado Manual",
-      "type": "istar.Resource",
-      "x": 400,
-      "y": 440,
-      "source": "act-estudante",
+      "id": "dep-acesso-externo",
+      "text": "Identificar eventos abertos ao público",
+      "type": "istar.Goal",
+      "x": 684,
+      "y": 173,
+      "source": "5a634453-fcbb-4146-ae8b-3bf0023ff57a",
       "target": "act-organizador"
+    },
+    {
+      "id": "dep-validacao-aac",
+      "text": "Validar Atividades Acadêmicas Complementares (AAC)",
+      "type": "istar.Goal",
+      "x": 239,
+      "y": 763,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "6a7b81ee-2f40-46dc-8340-d7530777e671"
+    },
+    {
+      "id": "58893254-734b-411e-b13c-dc1ac2078e09",
+      "text": "Lenta Entrega do Certificado",
+      "type": "istar.Quality",
+      "x": 619,
+      "y": 651,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "act-organizador"
+    },
+    {
+      "id": "858f68c9-f34f-4a8f-a7be-51ceac1c53bf",
+      "text": "Lenta Validação da Atividades Acadêmicas",
+      "type": "istar.Quality",
+      "x": 452,
+      "y": 804,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "6a7b81ee-2f40-46dc-8340-d7530777e671"
+    },
+    {
+      "id": "afc24312-1ef0-44a1-a38d-abae9fa99ff4",
+      "text": "Histórico Acadêmico",
+      "type": "istar.Resource",
+      "x": 351,
+      "y": 802,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "6a7b81ee-2f40-46dc-8340-d7530777e671"
+    },
+    {
+      "id": "cf4522f5-e5e3-40ed-ae25-e3e3b04f6d5e",
+      "text": "Lista de Presença em Papel",
+      "type": "istar.Resource",
+      "x": 512,
+      "y": 549,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "act-organizador"
+    },
+    {
+      "id": "6b1d9fb8-0e75-4141-8cb1-12a3c376fa05",
+      "text": "Acessar Portal Cin",
+      "type": "istar.Task",
+      "x": 767,
+      "y": 231,
+      "source": "5a634453-fcbb-4146-ae8b-3bf0023ff57a",
+      "target": "act-organizador"
+    },
+    {
+      "id": "23b49763-3f61-4804-b1fd-aaf999731a33",
+      "text": "Publicar Evento no Portal",
+      "type": "istar.Task",
+      "x": 984,
+      "y": 211,
+      "source": "5a634453-fcbb-4146-ae8b-3bf0023ff57a",
+      "target": "act-organizador"
+    },
+    {
+      "id": "00997dae-cc06-4276-9b8f-a537b5fdb8f4",
+      "text": "Página Web",
+      "type": "istar.Resource",
+      "x": 874,
+      "y": 238,
+      "source": "5a634453-fcbb-4146-ae8b-3bf0023ff57a",
+      "target": "act-organizador"
+    },
+    {
+      "id": "2e81e41f-f0d8-4f37-9be3-9e9b999244cd",
+      "text": "Aprovação da Realização de Evento",
+      "type": "istar.Goal",
+      "x": 992,
+      "y": 556,
+      "source": "act-organizador",
+      "target": "1f284167-caa6-477b-9e88-46e5651266d2"
+    },
+    {
+      "id": "0f08ddec-069d-48e1-bd72-fcf03c4dc24c",
+      "text": "Alocar Local e Horário do Evento",
+      "type": "istar.Task",
+      "x": 881,
+      "y": 554,
+      "source": "act-organizador",
+      "target": "1f284167-caa6-477b-9e88-46e5651266d2"
+    },
+    {
+      "id": "20c118b5-062e-426c-b381-789f9729c2be",
+      "text": "Espaço",
+      "type": "istar.Resource",
+      "x": 826,
+      "y": 604,
+      "source": "act-organizador",
+      "target": "1f284167-caa6-477b-9e88-46e5651266d2"
+    },
+    {
+      "id": "fd84c35f-2716-47ca-b0f0-53c97c86cd4c",
+      "text": "Divulgar Evento no Canais",
+      "type": "istar.Task",
+      "x": 1002,
+      "y": 288,
+      "source": "act-organizador",
+      "target": "2245c270-59f8-4525-b2dc-6c4a896adc57"
+    },
+    {
+      "id": "34edeb5e-07da-4bbb-9621-6ac28b6c3607",
+      "text": "Incluir Horas Complementares",
+      "type": "istar.Task",
+      "x": 155,
+      "y": 708,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "6a7b81ee-2f40-46dc-8340-d7530777e671"
+    },
+    {
+      "id": "69a6ff96-da16-475e-b747-0ab9ddb5da46",
+      "text": "Inscrever no Evento",
+      "type": "istar.Goal",
+      "x": 290,
+      "y": 387,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "35ddd945-fd3b-4b91-90b6-5c82b5197bf7"
+    },
+    {
+      "id": "4aacb6c7-d8ac-41a7-b00b-399e28731e42",
+      "text": "Preecher Formulário Inscrição",
+      "type": "istar.Task",
+      "x": 115,
+      "y": 457,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "35ddd945-fd3b-4b91-90b6-5c82b5197bf7"
+    },
+    {
+      "id": "729ce70c-29e6-4b2e-a485-78184f25c624",
+      "text": "Atribuir Horas de AAC do Estudante",
+      "type": "istar.Goal",
+      "x": 478,
+      "y": 881,
+      "source": "6a7b81ee-2f40-46dc-8340-d7530777e671",
+      "target": "c91f1e2e-f060-49d4-a725-ce785d06f857"
+    },
+    {
+      "id": "a93e7bdb-f7d1-4149-9616-e18bd92dfe77",
+      "text": "Usabilidade Ruim",
+      "type": "istar.Quality",
+      "x": 411,
+      "y": 1061,
+      "source": "6a7b81ee-2f40-46dc-8340-d7530777e671",
+      "target": "c91f1e2e-f060-49d4-a725-ce785d06f857"
+    },
+    {
+      "id": "fbe481ad-27f5-4426-bdf0-83bcafae4bdc",
+      "text": "Horas da AAC de Partipação no Evento",
+      "type": "istar.Resource",
+      "x": 412,
+      "y": 940,
+      "source": "c91f1e2e-f060-49d4-a725-ce785d06f857",
+      "target": "6a7b81ee-2f40-46dc-8340-d7530777e671"
+    },
+    {
+      "id": "d8f0c8d0-1038-4216-a3f7-65f115d713ad",
+      "text": "Atualizar Horas AAC do Estudante",
+      "type": "istar.Task",
+      "x": 403,
+      "y": 1012,
+      "source": "6a7b81ee-2f40-46dc-8340-d7530777e671",
+      "target": "c91f1e2e-f060-49d4-a725-ce785d06f857"
+    },
+    {
+      "id": "01bb9c3f-6a2c-4836-af56-ee1259bf2313",
+      "text": "Completar Horas do ACC",
+      "type": "istar.Goal",
+      "x": 798,
+      "y": 755,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "c91f1e2e-f060-49d4-a725-ce785d06f857"
+    },
+    {
+      "id": "c06c6d0c-0989-4fbd-8d28-9b9d719774af",
+      "text": "Visualizar Horas de AAC",
+      "type": "istar.Task",
+      "x": 711,
+      "y": 798,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "c91f1e2e-f060-49d4-a725-ce785d06f857"
+    },
+    {
+      "id": "2a816370-ef3c-44e3-9a68-108fb07d902a",
+      "text": "Baixa Visiblidade dos Espaços Disponíveis",
+      "type": "istar.Quality",
+      "x": 724,
+      "y": 626,
+      "source": "act-organizador",
+      "target": "1f284167-caa6-477b-9e88-46e5651266d2"
+    },
+    {
+      "id": "a84cd8de-c936-4fc3-a687-2858cba1f343",
+      "text": "Baixa Engajamento",
+      "type": "istar.Quality",
+      "x": 979,
+      "y": 345,
+      "source": "act-organizador",
+      "target": "2245c270-59f8-4525-b2dc-6c4a896adc57"
+    },
+    {
+      "id": "179760e7-9478-45f4-978b-201e9f2b3e79",
+      "text": "Publicar Postagem",
+      "type": "istar.Task",
+      "x": 980,
+      "y": 418,
+      "source": "act-organizador",
+      "target": "2245c270-59f8-4525-b2dc-6c4a896adc57"
+    },
+    {
+      "id": "4aaf7eea-ae17-4f3f-af98-1f4d682654f3",
+      "text": "Mídia",
+      "type": "istar.Resource",
+      "x": 988,
+      "y": 477,
+      "source": "act-organizador",
+      "target": "2245c270-59f8-4525-b2dc-6c4a896adc57"
+    },
+    {
+      "id": "e4f0aacf-a8c9-4534-ab9d-a066f78b90ea",
+      "text": "Dados Pessoais",
+      "type": "istar.Resource",
+      "x": 336,
+      "y": 319,
+      "source": "35ddd945-fd3b-4b91-90b6-5c82b5197bf7",
+      "target": "f66f3abc-419c-48ed-9f08-000d56cc0084"
+    },
+    {
+      "id": "d8a2e05b-a125-412e-aad8-e65755bdeb9e",
+      "text": "Baixa Proteção de Dados",
+      "type": "istar.Quality",
+      "x": 221,
+      "y": 415,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "35ddd945-fd3b-4b91-90b6-5c82b5197bf7"
+    },
+    {
+      "id": "1cdd4d99-fc02-4da8-8cba-e2d78b70401b",
+      "text": "Baixar Usabilidade",
+      "type": "istar.Quality",
+      "x": 607,
+      "y": 765,
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "c91f1e2e-f060-49d4-a725-ce785d06f857"
+    },
+    {
+      "id": "9b5cebb2-d2cc-4ab3-9eed-ed16d2eedc83",
+      "text": "Dados Pessoais",
+      "type": "istar.Resource",
+      "x": 587,
+      "y": 861,
+      "source": "c91f1e2e-f060-49d4-a725-ce785d06f857",
+      "target": "f66f3abc-419c-48ed-9f08-000d56cc0084"
     }
   ],
   "links": [
     {
-      "id": "lnk-ref-1",
+      "id": "link-org-ref-1",
       "type": "istar.AndRefinementLink",
-      "source": "node-org-t1",
-      "target": "node-org-g1"
+      "source": "org-node-t1",
+      "target": "org-node-g1"
     },
     {
-      "id": "lnk-ref-2",
+      "id": "link-org-ref-2",
       "type": "istar.AndRefinementLink",
-      "source": "node-org-t2",
-      "target": "node-org-t1"
+      "source": "org-node-t2",
+      "target": "org-node-t1"
     },
     {
-      "id": "lnk-ref-3",
+      "id": "link-org-ref-3",
       "type": "istar.AndRefinementLink",
-      "source": "node-org-t3",
-      "target": "node-org-t1"
+      "source": "org-node-t3",
+      "target": "org-node-t1"
     },
     {
-      "id": "lnk-ref-4",
+      "id": "link-org-ref-4",
       "type": "istar.AndRefinementLink",
-      "source": "node-org-t4",
-      "target": "node-org-t1"
+      "source": "org-node-t4",
+      "target": "org-node-t1"
     },
     {
-      "id": "lnk-ref-5",
+      "id": "link-org-ref-5",
       "type": "istar.AndRefinementLink",
-      "source": "node-est-t1",
-      "target": "node-est-g1"
+      "source": "org-node-t5",
+      "target": "org-node-t1"
     },
     {
-      "id": "lnk-ref-6",
+      "id": "link-org-need-1",
+      "type": "istar.NeededByLink",
+      "source": "org-node-r1",
+      "target": "org-node-t4"
+    },
+    {
+      "id": "link-org-qual-1",
+      "type": "istar.QualificationLink",
+      "source": "org-node-q1",
+      "target": "org-node-t2"
+    },
+    {
+      "id": "link-est-ref-1",
       "type": "istar.AndRefinementLink",
-      "source": "node-est-t2",
-      "target": "node-est-t1"
+      "source": "est-node-t1",
+      "target": "est-node-g1"
     },
     {
-      "id": "lnk-contrib-1",
-      "type": "istar.ContributionLink",
-      "source": "node-org-t3",
-      "target": "node-org-q1",
-      "label": "hurt"
+      "id": "link-est-ref-2",
+      "type": "istar.AndRefinementLink",
+      "source": "est-node-t2",
+      "target": "est-node-g1"
     },
     {
-      "id": "lnk-contrib-2",
-      "type": "istar.ContributionLink",
-      "source": "node-org-t4",
-      "target": "node-org-q2",
-      "label": "hurt"
+      "id": "link-est-ref-3",
+      "type": "istar.AndRefinementLink",
+      "source": "est-node-t3",
+      "target": "est-node-g2"
     },
     {
-      "id": "lnk-contrib-3",
-      "type": "istar.ContributionLink",
-      "source": "node-est-t2",
-      "target": "node-est-q1",
-      "label": "hurt"
+      "id": "link-est-ref-4",
+      "type": "istar.AndRefinementLink",
+      "source": "est-node-t4",
+      "target": "est-node-g2"
     },
     {
-      "id": "lnk-dep-1a",
+      "id": "link-sec-ref-1",
+      "type": "istar.AndRefinementLink",
+      "source": "sec-node-t1",
+      "target": "sec-node-g1"
+    },
+    {
+      "id": "link-sec-ref-2",
+      "type": "istar.AndRefinementLink",
+      "source": "sec-node-t2",
+      "target": "sec-node-g1"
+    },
+    {
+      "id": "link-sec-need-1",
+      "type": "istar.NeededByLink",
+      "source": "sec-node-r1",
+      "target": "sec-node-t1"
+    },
+    {
+      "id": "link-inf-ref-1",
+      "type": "istar.AndRefinementLink",
+      "source": "inf-node-t1",
+      "target": "inf-node-g1"
+    },
+    {
+      "id": "link-inf-need-1",
+      "type": "istar.NeededByLink",
+      "source": "inf-node-r1",
+      "target": "inf-node-t1"
+    },
+    {
+      "id": "28c36bf7-867a-43d9-a0a9-660d1b6047cc",
       "type": "istar.DependencyLink",
-      "source": "act-estudante",
-      "target": "dep-sessao"
+      "source": "c91f1e2e-f060-49d4-a725-ce785d06f857",
+      "target": "9b5cebb2-d2cc-4ab3-9eed-ed16d2eedc83"
     },
     {
-      "id": "lnk-dep-1b",
+      "id": "5c245e2b-cea0-4d68-a2f4-9e34942433d9",
       "type": "istar.DependencyLink",
-      "source": "dep-sessao",
+      "source": "9b5cebb2-d2cc-4ab3-9eed-ed16d2eedc83",
+      "target": "f66f3abc-419c-48ed-9f08-000d56cc0084"
+    },
+    {
+      "id": "7af4d198-d621-457d-8121-c6fb93a3dc95",
+      "type": "istar.DependencyLink",
+      "source": "1cdd4d99-fc02-4da8-8cba-e2d78b70401b",
+      "target": "c91f1e2e-f060-49d4-a725-ce785d06f857"
+    },
+    {
+      "id": "58ff4c35-03e6-49eb-8140-6287d5a24755",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "1cdd4d99-fc02-4da8-8cba-e2d78b70401b"
+    },
+    {
+      "id": "3927af2a-d025-40ca-9ce0-8f1cc296a8ec",
+      "type": "istar.DependencyLink",
+      "source": "d8a2e05b-a125-412e-aad8-e65755bdeb9e",
+      "target": "35ddd945-fd3b-4b91-90b6-5c82b5197bf7"
+    },
+    {
+      "id": "1d80a9c4-7700-4233-8a0f-13cf464690c8",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "d8a2e05b-a125-412e-aad8-e65755bdeb9e"
+    },
+    {
+      "id": "5d989b93-b41c-40ed-a2e8-6cc09061c6df",
+      "type": "istar.DependencyLink",
+      "source": "35ddd945-fd3b-4b91-90b6-5c82b5197bf7",
+      "target": "e4f0aacf-a8c9-4534-ab9d-a066f78b90ea"
+    },
+    {
+      "id": "3edd959d-f15a-4742-81f7-bb61f2d2bf36",
+      "type": "istar.DependencyLink",
+      "source": "e4f0aacf-a8c9-4534-ab9d-a066f78b90ea",
+      "target": "f66f3abc-419c-48ed-9f08-000d56cc0084"
+    },
+    {
+      "id": "0bf7493f-d6f4-4799-89a1-bc24ed69f58a",
+      "type": "istar.DependencyLink",
+      "source": "4aaf7eea-ae17-4f3f-af98-1f4d682654f3",
+      "target": "2245c270-59f8-4525-b2dc-6c4a896adc57"
+    },
+    {
+      "id": "e8663b97-7b8f-47eb-86fd-fbbcc6a1d58f",
+      "type": "istar.DependencyLink",
+      "source": "act-organizador",
+      "target": "4aaf7eea-ae17-4f3f-af98-1f4d682654f3"
+    },
+    {
+      "id": "8fdce8ef-8444-4048-b6bf-cff83c1c1320",
+      "type": "istar.DependencyLink",
+      "source": "179760e7-9478-45f4-978b-201e9f2b3e79",
+      "target": "2245c270-59f8-4525-b2dc-6c4a896adc57"
+    },
+    {
+      "id": "ea88b157-1b18-46e0-b654-3217c9fa455d",
+      "type": "istar.DependencyLink",
+      "source": "act-organizador",
+      "target": "179760e7-9478-45f4-978b-201e9f2b3e79"
+    },
+    {
+      "id": "d5d65bcc-d26f-437b-8011-ea553c610a22",
+      "type": "istar.DependencyLink",
+      "source": "a84cd8de-c936-4fc3-a687-2858cba1f343",
+      "target": "2245c270-59f8-4525-b2dc-6c4a896adc57"
+    },
+    {
+      "id": "8dc69512-d334-4b12-9f38-57bfd1a1bfb9",
+      "type": "istar.DependencyLink",
+      "source": "act-organizador",
+      "target": "a84cd8de-c936-4fc3-a687-2858cba1f343"
+    },
+    {
+      "id": "81556c97-4706-4e8c-92cd-1c02ac84e77b",
+      "type": "istar.DependencyLink",
+      "source": "2a816370-ef3c-44e3-9a68-108fb07d902a",
+      "target": "1f284167-caa6-477b-9e88-46e5651266d2"
+    },
+    {
+      "id": "ba5336b0-9e5c-48aa-8e07-9518018220a3",
+      "type": "istar.DependencyLink",
+      "source": "act-organizador",
+      "target": "2a816370-ef3c-44e3-9a68-108fb07d902a"
+    },
+    {
+      "id": "deaf4e8a-dbe6-4e50-8311-a0c0cbd4fdf7",
+      "type": "istar.DependencyLink",
+      "source": "c06c6d0c-0989-4fbd-8d28-9b9d719774af",
+      "target": "c91f1e2e-f060-49d4-a725-ce785d06f857"
+    },
+    {
+      "id": "84f0c9d5-acdc-4ad4-9d4d-d7009e9b56d7",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "c06c6d0c-0989-4fbd-8d28-9b9d719774af"
+    },
+    {
+      "id": "0db9d428-d3ab-4ebc-9ed5-0ad08e55e176",
+      "type": "istar.DependencyLink",
+      "source": "01bb9c3f-6a2c-4836-af56-ee1259bf2313",
+      "target": "c91f1e2e-f060-49d4-a725-ce785d06f857"
+    },
+    {
+      "id": "cb22fc11-6c17-40a2-9326-7d15b5dd4c82",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "01bb9c3f-6a2c-4836-af56-ee1259bf2313"
+    },
+    {
+      "id": "7f381dbe-fa0b-4547-afc5-35deb3ca07ad",
+      "type": "istar.DependencyLink",
+      "source": "d8f0c8d0-1038-4216-a3f7-65f115d713ad",
+      "target": "c91f1e2e-f060-49d4-a725-ce785d06f857"
+    },
+    {
+      "id": "f0c6b31f-40c1-45cd-b71a-c17c664db3bf",
+      "type": "istar.DependencyLink",
+      "source": "6a7b81ee-2f40-46dc-8340-d7530777e671",
+      "target": "d8f0c8d0-1038-4216-a3f7-65f115d713ad"
+    },
+    {
+      "id": "a1f330b4-5b25-4e9e-a4c0-b8644a47683c",
+      "type": "istar.DependencyLink",
+      "source": "c91f1e2e-f060-49d4-a725-ce785d06f857",
+      "target": "fbe481ad-27f5-4426-bdf0-83bcafae4bdc"
+    },
+    {
+      "id": "cd056fea-342f-4c6c-98e2-184ba9193f3a",
+      "type": "istar.DependencyLink",
+      "source": "fbe481ad-27f5-4426-bdf0-83bcafae4bdc",
+      "target": "6a7b81ee-2f40-46dc-8340-d7530777e671"
+    },
+    {
+      "id": "ff2b3b5d-cada-4a82-9b65-e5e0b8024b2c",
+      "type": "istar.DependencyLink",
+      "source": "a93e7bdb-f7d1-4149-9616-e18bd92dfe77",
+      "target": "c91f1e2e-f060-49d4-a725-ce785d06f857"
+    },
+    {
+      "id": "543129c4-6feb-4850-934b-36e1cec59c51",
+      "type": "istar.DependencyLink",
+      "source": "6a7b81ee-2f40-46dc-8340-d7530777e671",
+      "target": "a93e7bdb-f7d1-4149-9616-e18bd92dfe77"
+    },
+    {
+      "id": "66096287-6b58-4f1c-b5f2-e34a3826eb20",
+      "type": "istar.DependencyLink",
+      "source": "729ce70c-29e6-4b2e-a485-78184f25c624",
+      "target": "c91f1e2e-f060-49d4-a725-ce785d06f857"
+    },
+    {
+      "id": "05ea856c-02b8-4c50-b46f-ef65b1e484e8",
+      "type": "istar.DependencyLink",
+      "source": "6a7b81ee-2f40-46dc-8340-d7530777e671",
+      "target": "729ce70c-29e6-4b2e-a485-78184f25c624"
+    },
+    {
+      "id": "e48b0c63-d648-4c63-97b0-9df8e95b007d",
+      "type": "istar.DependencyLink",
+      "source": "4aacb6c7-d8ac-41a7-b00b-399e28731e42",
+      "target": "35ddd945-fd3b-4b91-90b6-5c82b5197bf7"
+    },
+    {
+      "id": "b8e92888-713b-431b-84d1-30de3a0773b2",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "4aacb6c7-d8ac-41a7-b00b-399e28731e42"
+    },
+    {
+      "id": "44f48ec9-4350-4978-a818-4e0e32865c51",
+      "type": "istar.DependencyLink",
+      "source": "69a6ff96-da16-475e-b747-0ab9ddb5da46",
+      "target": "35ddd945-fd3b-4b91-90b6-5c82b5197bf7"
+    },
+    {
+      "id": "577a5572-a7f7-465c-9418-7c0d8f7eb6a6",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "69a6ff96-da16-475e-b747-0ab9ddb5da46"
+    },
+    {
+      "id": "3e755f3f-9972-4b9a-b283-ded5ffbed8cf",
+      "type": "istar.DependencyLink",
+      "source": "34edeb5e-07da-4bbb-9621-6ac28b6c3607",
+      "target": "6a7b81ee-2f40-46dc-8340-d7530777e671"
+    },
+    {
+      "id": "cd2ef824-3652-4431-ab71-47a396bd19ea",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "34edeb5e-07da-4bbb-9621-6ac28b6c3607"
+    },
+    {
+      "id": "d3567b7b-fe80-431d-82d3-b3f71ce2a55d",
+      "type": "istar.DependencyLink",
+      "source": "fd84c35f-2716-47ca-b0f0-53c97c86cd4c",
+      "target": "2245c270-59f8-4525-b2dc-6c4a896adc57"
+    },
+    {
+      "id": "56f2507b-539f-4696-a5c3-be88655a017d",
+      "type": "istar.DependencyLink",
+      "source": "act-organizador",
+      "target": "fd84c35f-2716-47ca-b0f0-53c97c86cd4c"
+    },
+    {
+      "id": "8926dc43-59c9-4649-80ae-7015ff0b4abb",
+      "type": "istar.DependencyLink",
+      "source": "20c118b5-062e-426c-b381-789f9729c2be",
+      "target": "1f284167-caa6-477b-9e88-46e5651266d2"
+    },
+    {
+      "id": "23616a70-bf3b-4ea2-915b-7ce85081e027",
+      "type": "istar.DependencyLink",
+      "source": "act-organizador",
+      "target": "20c118b5-062e-426c-b381-789f9729c2be"
+    },
+    {
+      "id": "ab99420f-037d-4063-8fb0-b9e351685c3f",
+      "type": "istar.DependencyLink",
+      "source": "0f08ddec-069d-48e1-bd72-fcf03c4dc24c",
+      "target": "1f284167-caa6-477b-9e88-46e5651266d2"
+    },
+    {
+      "id": "3b076dbe-5263-4720-a93d-0cb5aae06eb4",
+      "type": "istar.DependencyLink",
+      "source": "act-organizador",
+      "target": "0f08ddec-069d-48e1-bd72-fcf03c4dc24c"
+    },
+    {
+      "id": "73f0a4da-a56d-48be-a89b-e77476085d88",
+      "type": "istar.DependencyLink",
+      "source": "2e81e41f-f0d8-4f37-9be3-9e9b999244cd",
+      "target": "1f284167-caa6-477b-9e88-46e5651266d2"
+    },
+    {
+      "id": "a6b75ce8-5889-4e8c-bca7-713ce33ca088",
+      "type": "istar.DependencyLink",
+      "source": "act-organizador",
+      "target": "2e81e41f-f0d8-4f37-9be3-9e9b999244cd"
+    },
+    {
+      "id": "9aeb8081-f3d6-4fa4-83f7-c021622f06f8",
+      "type": "istar.DependencyLink",
+      "source": "00997dae-cc06-4276-9b8f-a537b5fdb8f4",
       "target": "act-organizador"
     },
     {
-      "id": "lnk-dep-2a",
+      "id": "6ca859b0-2c3c-4fa6-ae6c-2d54d6da7a35",
+      "type": "istar.DependencyLink",
+      "source": "5a634453-fcbb-4146-ae8b-3bf0023ff57a",
+      "target": "00997dae-cc06-4276-9b8f-a537b5fdb8f4"
+    },
+    {
+      "id": "563ac821-f7c8-4dc2-a8c0-bdd38e55bbfc",
+      "type": "istar.DependencyLink",
+      "source": "5a634453-fcbb-4146-ae8b-3bf0023ff57a",
+      "target": "23b49763-3f61-4804-b1fd-aaf999731a33"
+    },
+    {
+      "id": "97cfe8e1-e6a8-4d7a-9dd7-b2b0604536ab",
+      "type": "istar.DependencyLink",
+      "source": "23b49763-3f61-4804-b1fd-aaf999731a33",
+      "target": "act-organizador"
+    },
+    {
+      "id": "f1b70806-c247-4c19-92aa-b81aff4ae098",
+      "type": "istar.DependencyLink",
+      "source": "6b1d9fb8-0e75-4141-8cb1-12a3c376fa05",
+      "target": "act-organizador"
+    },
+    {
+      "id": "e61222ca-6504-4cf6-b724-27c739fefef1",
+      "type": "istar.DependencyLink",
+      "source": "5a634453-fcbb-4146-ae8b-3bf0023ff57a",
+      "target": "6b1d9fb8-0e75-4141-8cb1-12a3c376fa05"
+    },
+    {
+      "id": "ee20b9e0-b94b-403e-8ac7-585f2dcca14a",
+      "type": "istar.DependencyLink",
+      "source": "cf4522f5-e5e3-40ed-ae25-e3e3b04f6d5e",
+      "target": "act-organizador"
+    },
+    {
+      "id": "74290361-fb63-461e-88c3-cf62cb05b2f9",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "cf4522f5-e5e3-40ed-ae25-e3e3b04f6d5e"
+    },
+    {
+      "id": "f3e60e1a-3c25-4c4e-bcd2-dfda10f297ab",
+      "type": "istar.DependencyLink",
+      "source": "afc24312-1ef0-44a1-a38d-abae9fa99ff4",
+      "target": "6a7b81ee-2f40-46dc-8340-d7530777e671"
+    },
+    {
+      "id": "b161212c-3c21-4861-94af-559f1df991ac",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "afc24312-1ef0-44a1-a38d-abae9fa99ff4"
+    },
+    {
+      "id": "5dc8baff-3a05-418d-8019-774b86f5bf8e",
+      "type": "istar.DependencyLink",
+      "source": "858f68c9-f34f-4a8f-a7be-51ceac1c53bf",
+      "target": "6a7b81ee-2f40-46dc-8340-d7530777e671"
+    },
+    {
+      "id": "46df1c99-743d-44f4-b721-293d4b0828c2",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "858f68c9-f34f-4a8f-a7be-51ceac1c53bf"
+    },
+    {
+      "id": "f067d161-05eb-4d92-94ba-12e14bd131bd",
+      "type": "istar.DependencyLink",
+      "source": "58893254-734b-411e-b13c-dc1ac2078e09",
+      "target": "act-organizador"
+    },
+    {
+      "id": "22d06bad-f643-4a20-b424-d00b7f8f7202",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "58893254-734b-411e-b13c-dc1ac2078e09"
+    },
+    {
+      "id": "cc5f4e27-df9e-4905-bc96-04b6c1a283e8",
+      "type": "istar.DependencyLink",
+      "source": "dep-validacao-aac",
+      "target": "6a7b81ee-2f40-46dc-8340-d7530777e671"
+    },
+    {
+      "id": "0271476b-0296-4f05-aaff-320ee1aa2714",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "dep-validacao-aac"
+    },
+    {
+      "id": "78fd0aa6-80f6-4dba-a447-ef11291f47cd",
+      "type": "istar.DependencyLink",
+      "source": "dep-acesso-externo",
+      "target": "act-organizador"
+    },
+    {
+      "id": "1669c287-5f5b-464a-a3ed-81a5cfd16481",
+      "type": "istar.DependencyLink",
+      "source": "5a634453-fcbb-4146-ae8b-3bf0023ff57a",
+      "target": "dep-acesso-externo"
+    },
+    {
+      "id": "7abed865-4874-4a30-b05e-d2e5ad7ca21a",
+      "type": "istar.DependencyLink",
+      "source": "dep-lista-presenca",
+      "target": "f66f3abc-419c-48ed-9f08-000d56cc0084"
+    },
+    {
+      "id": "c5263f5f-5068-4934-afcf-52fdf21980d6",
       "type": "istar.DependencyLink",
       "source": "act-organizador",
       "target": "dep-lista-presenca"
     },
     {
-      "id": "lnk-dep-2b",
+      "id": "e4f44528-7cab-4ebd-8281-ec0ca92bc3ad",
       "type": "istar.DependencyLink",
-      "source": "dep-lista-presenca",
-      "target": "act-estudante"
-    },
-    {
-      "id": "lnk-dep-3a",
-      "type": "istar.DependencyLink",
-      "source": "act-estudante",
-      "target": "dep-certificado-papel"
-    },
-    {
-      "id": "lnk-dep-3b",
-      "type": "istar.DependencyLink",
-      "source": "dep-certificado-papel",
+      "source": "dep-certificado",
       "target": "act-organizador"
+    },
+    {
+      "id": "428fbc1a-6dcb-4f01-bdd6-262d4e05bf60",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "dep-certificado"
+    },
+    {
+      "id": "23908e22-9316-4d93-9fb9-0657ecb21db9",
+      "type": "istar.DependencyLink",
+      "source": "dep-divulgacao",
+      "target": "act-organizador"
+    },
+    {
+      "id": "f36cae10-9816-4ef3-9631-65f61645cb5c",
+      "type": "istar.DependencyLink",
+      "source": "f66f3abc-419c-48ed-9f08-000d56cc0084",
+      "target": "dep-divulgacao"
+    },
+    {
+      "id": "3358b405-434b-4222-ab00-8e3f427153ba",
+      "type": "istar.IsALink",
+      "source": "d4789f97-ce7e-4a2e-abaf-c2e0a6b29c49",
+      "target": "f66f3abc-419c-48ed-9f08-000d56cc0084"
+    },
+    {
+      "id": "ee3b7b5f-7445-46dd-ba0b-46da8754f3a0",
+      "type": "istar.ParticipatesInLink",
+      "source": "50e439d6-08ad-40fc-b0a6-53f044fc4f23",
+      "target": "2245c270-59f8-4525-b2dc-6c4a896adc57"
+    },
+    {
+      "id": "f068481e-c430-489f-93a0-36d0dfa5c4a7",
+      "type": "istar.ParticipatesInLink",
+      "source": "d28146c3-528a-4a66-a044-5b38d6caadb6",
+      "target": "2245c270-59f8-4525-b2dc-6c4a896adc57"
+    },
+    {
+      "id": "21c92750-a7fa-4019-955b-1da346b3f483",
+      "type": "istar.ParticipatesInLink",
+      "source": "b81ce6f1-b063-4bbd-b34c-278c0b4de5e7",
+      "target": "35ddd945-fd3b-4b91-90b6-5c82b5197bf7"
+    },
+    {
+      "id": "6d8e39da-c561-4d5c-9fb5-ecdab0d43dcc",
+      "type": "istar.ParticipatesInLink",
+      "source": "d246275e-2e87-4e10-b12a-9f4efb0ca305",
+      "target": "35ddd945-fd3b-4b91-90b6-5c82b5197bf7"
+    },
+    {
+      "id": "fdbdf14e-813b-4d81-b13a-19002e4b7feb",
+      "type": "istar.ParticipatesInLink",
+      "source": "834ada88-effe-4aeb-9cf1-b7590953eddf",
+      "target": "c91f1e2e-f060-49d4-a725-ce785d06f857"
     }
   ],
-  "display": {},
-  "tool": "pistar.1.1.0",
+  "display": {
+    "act-organizador": {
+      "collapsed": false
+    },
+    "f66f3abc-419c-48ed-9f08-000d56cc0084": {
+      "collapsed": false
+    },
+    "6a7b81ee-2f40-46dc-8340-d7530777e671": {
+      "collapsed": false
+    },
+    "1f284167-caa6-477b-9e88-46e5651266d2": {
+      "collapsed": false
+    },
+    "5a634453-fcbb-4146-ae8b-3bf0023ff57a": {
+      "collapsed": false
+    },
+    "35ddd945-fd3b-4b91-90b6-5c82b5197bf7": {
+      "collapsed": false
+    },
+    "2245c270-59f8-4525-b2dc-6c4a896adc57": {
+      "collapsed": false
+    },
+    "c91f1e2e-f060-49d4-a725-ce785d06f857": {
+      "collapsed": false
+    },
+    "834ada88-effe-4aeb-9cf1-b7590953eddf": {
+      "collapsed": true
+    },
+    "d28146c3-528a-4a66-a044-5b38d6caadb6": {
+      "collapsed": true
+    },
+    "50e439d6-08ad-40fc-b0a6-53f044fc4f23": {
+      "collapsed": true
+    },
+    "d4789f97-ce7e-4a2e-abaf-c2e0a6b29c49": {
+      "collapsed": true
+    },
+    "d246275e-2e87-4e10-b12a-9f4efb0ca305": {
+      "collapsed": true
+    },
+    "b81ce6f1-b063-4bbd-b34c-278c0b4de5e7": {
+      "collapsed": true
+    }
+  },
+  "tool": "pistar.2.1.0",
   "istar": "2.0",
-  "saveDate": "Fri, 25 Sep 2026 11:34:00 GMT",
+  "saveDate": "Fri, 25 Sep 2026 12:00:00 GMT",
   "diagram": {
     "width": 2000,
-    "height": 2000
+    "height": 2090,
+    "customProperties": {
+      "Description": "Modelo SR (AS-IS) - Cenário Apresentação(1)"
+    }
   }
 }
