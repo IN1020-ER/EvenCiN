@@ -1,0 +1,167 @@
+{
+  "actors": [
+    {
+      "id": "act-org",
+      "text": "Organizador",
+      "type": "istar.Role",
+      "x": 480,
+      "y": 150,
+      "nodes": []
+    },
+    {
+      "id": "act-est",
+      "text": "Estudante",
+      "type": "istar.Role",
+      "x": 150,
+      "y": 400,
+      "nodes": []
+    },
+    {
+      "id": "act-sys",
+      "text": "Sistema de Gestão de Eventos",
+      "type": "istar.Actor",
+      "x": 480,
+      "y": 400,
+      "nodes": []
+    },
+    {
+      "id": "act-infra",
+      "text": "Gestão Infraestrutura",
+      "type": "istar.Actor",
+      "x": 800,
+      "y": 150,
+      "nodes": []
+    },
+    {
+      "id": "act-com",
+      "text": "Comunidade Externa",
+      "type": "istar.Agent",
+      "x": 800,
+      "y": 400,
+      "nodes": []
+    },
+    {
+      "id": "act-sigaa",
+      "text": "SIGAA",
+      "type": "istar.Actor",
+      "x": 480,
+      "y": 650,
+      "nodes": []
+    }
+  ],
+  "orphans": [],
+  "dependencies": [
+    {
+      "id": "dep-1",
+      "text": "Automatizar Gestão do Evento",
+      "type": "istar.Goal",
+      "x": 480,
+      "y": 275,
+      "source": "act-org",
+      "target": "act-sys"
+    },
+    {
+      "id": "dep-2",
+      "text": "Lista de Presença Digital",
+      "type": "istar.Resource",
+      "x": 560,
+      "y": 275,
+      "source": "act-org",
+      "target": "act-sys"
+    },
+    {
+      "id": "dep-3",
+      "text": "Inscrever em Evento",
+      "type": "istar.Task",
+      "x": 315,
+      "y": 380,
+      "source": "act-est",
+      "target": "act-sys"
+    },
+    {
+      "id": "dep-4",
+      "text": "Certificado Digital",
+      "type": "istar.Resource",
+      "x": 315,
+      "y": 430,
+      "source": "act-est",
+      "target": "act-sys"
+    },
+    {
+      "id": "dep-5",
+      "text": "Inscrição Ágil e Segura",
+      "type": "istar.Quality",
+      "x": 315,
+      "y": 330,
+      "source": "act-est",
+      "target": "act-sys"
+    },
+    {
+      "id": "dep-6",
+      "text": "Validação Automática de AAC",
+      "type": "istar.Goal",
+      "x": 315,
+      "y": 480,
+      "source": "act-est",
+      "target": "act-sys"
+    },
+    {
+      "id": "dep-7",
+      "text": "Aprovação de Espaço",
+      "type": "istar.Goal",
+      "x": 640,
+      "y": 150,
+      "source": "act-org",
+      "target": "act-infra"
+    },
+    {
+      "id": "dep-8",
+      "text": "Visualizar Eventos Abertos",
+      "type": "istar.Goal",
+      "x": 640,
+      "y": 400,
+      "source": "act-com",
+      "target": "act-sys"
+    },
+    {
+      "id": "dep-9",
+      "text": "Registrar Horas AAC Automaticamente",
+      "type": "istar.Task",
+      "x": 480,
+      "y": 525,
+      "source": "act-sys",
+      "target": "act-sigaa"
+    }
+  ],
+  "links": [],
+  "display": {
+    "act-org": {
+      "collapsed": true
+    },
+    "act-est": {
+      "collapsed": true
+    },
+    "act-sys": {
+      "collapsed": true
+    },
+    "act-infra": {
+      "collapsed": true
+    },
+    "act-com": {
+      "collapsed": true
+    },
+    "act-sigaa": {
+      "collapsed": true
+    }
+  },
+  "tool": "pistar.2.1.0",
+  "istar": "2.0",
+  "saveDate": "Fri, 02 Oct 2026 14:23:00 GMT",
+  "diagram": {
+    "width": 1000,
+    "height": 800,
+    "customProperties": {
+      "Description": "Modelo SD (TO-BE) - Centralização via Sistema de Gestão de Eventos"
+    }
+  }
+}
