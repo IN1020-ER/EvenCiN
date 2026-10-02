@@ -1,0 +1,396 @@
+{
+  "actors": [
+    {
+      "id": "act-organizador",
+      "text": "Organizador",
+      "type": "istar.Role",
+      "x": 730,
+      "y": 150,
+      "nodes": [
+        {
+          "id": "org-g1",
+          "text": "Realizar Evento Acadêmico",
+          "type": "istar.Goal",
+          "x": 730,
+          "y": 100
+        },
+        {
+          "id": "org-t1",
+          "text": "Gerenciar Evento via Sistema",
+          "type": "istar.Task",
+          "x": 730,
+          "y": 170
+        },
+        {
+          "id": "org-t2",
+          "text": "Solicitar Local Digitalmente",
+          "type": "istar.Task",
+          "x": 830,
+          "y": 200
+        },
+        {
+          "id": "org-t3",
+          "text": "Divulgar Evento",
+          "type": "istar.Task",
+          "x": 630,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "act-estudante",
+      "text": "Estudante",
+      "type": "istar.Role",
+      "x": 200,
+      "y": 450,
+      "nodes": [
+        {
+          "id": "est-g1",
+          "text": "Participar do Evento",
+          "type": "istar.Goal",
+          "x": 200,
+          "y": 380
+        },
+        {
+          "id": "est-t1",
+          "text": "Realizar Inscrição Digital",
+          "type": "istar.Task",
+          "x": 120,
+          "y": 450
+        },
+        {
+          "id": "est-t2",
+          "text": "Registrar Presença via Sistema",
+          "type": "istar.Task",
+          "x": 280,
+          "y": 450
+        },
+        {
+          "id": "est-g2",
+          "text": "Completar Horas do AAC",
+          "type": "istar.Goal",
+          "x": 200,
+          "y": 550
+        },
+        {
+          "id": "est-t3",
+          "text": "Acompanhar Validação de AAC",
+          "type": "istar.Task",
+          "x": 200,
+          "y": 620
+        }
+      ]
+    },
+    {
+      "id": "act-sistema",
+      "text": "Sistema de Gestão de Eventos",
+      "type": "istar.Actor",
+      "x": 730,
+      "y": 450,
+      "nodes": [
+        {
+          "id": "sys-g1",
+          "text": "Automatizar Gestão de Eventos",
+          "type": "istar.Goal",
+          "x": 730,
+          "y": 380
+        },
+        {
+          "id": "sys-t1",
+          "text": "Processar Inscrições",
+          "type": "istar.Task",
+          "x": 620,
+          "y": 450
+        },
+        {
+          "id": "sys-t2",
+          "text": "Gerar Lista de Presença Digital",
+          "type": "istar.Task",
+          "x": 730,
+          "y": 510
+        },
+        {
+          "id": "sys-t3",
+          "text": "Emitir Certificados Digitais",
+          "type": "istar.Task",
+          "x": 840,
+          "y": 450
+        },
+        {
+          "id": "sys-t4",
+          "text": "Integrar Dados de AAC",
+          "type": "istar.Task",
+          "x": 730,
+          "y": 580
+        },
+        {
+          "id": "sys-q1",
+          "text": "Inscrição Ágil e Segura",
+          "type": "istar.Quality",
+          "x": 580,
+          "y": 380
+        }
+      ]
+    },
+    {
+      "id": "act-sigaa",
+      "text": "SIGAA",
+      "type": "istar.Actor",
+      "x": 730,
+      "y": 800,
+      "nodes": [
+        {
+          "id": "sigaa-g1",
+          "text": "Registrar Histórico de AAC",
+          "type": "istar.Goal",
+          "x": 730,
+          "y": 740
+        },
+        {
+          "id": "sigaa-t1",
+          "text": "Receber Atualização Automática",
+          "type": "istar.Task",
+          "x": 730,
+          "y": 850
+        }
+      ]
+    },
+    {
+      "id": "act-infra",
+      "text": "Gestão Infraestrutura",
+      "type": "istar.Actor",
+      "x": 1150,
+      "y": 150,
+      "nodes": [
+        {
+          "id": "infra-g1",
+          "text": "Aprovação da Realização de Evento",
+          "type": "istar.Goal",
+          "x": 1150,
+          "y": 100
+        },
+        {
+          "id": "infra-t1",
+          "text": "Alocar Espaço Integrado ao Sistema",
+          "type": "istar.Task",
+          "x": 1150,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "act-comunidade",
+      "text": "Comunidade Externa",
+      "type": "istar.Agent",
+      "x": 1150,
+      "y": 450,
+      "nodes": [
+        {
+          "id": "com-g1",
+          "text": "Identificar Eventos Abertos",
+          "type": "istar.Goal",
+          "x": 1150,
+          "y": 400
+        },
+        {
+          "id": "com-t1",
+          "text": "Acessar Vitrine do Sistema",
+          "type": "istar.Task",
+          "x": 1150,
+          "y": 500
+        }
+      ]
+    }
+  ],
+  "orphans": [],
+  "dependencies": [
+    {
+      "id": "dep-org-sys-1",
+      "text": "Automatizar Gestão do Evento",
+      "type": "istar.Goal",
+      "x": 730,
+      "y": 280,
+      "source": "act-organizador",
+      "target": "act-sistema"
+    },
+    {
+      "id": "dep-sys-org-1",
+      "text": "Relatório Digital do Evento",
+      "type": "istar.Resource",
+      "x": 800,
+      "y": 280,
+      "source": "act-sistema",
+      "target": "act-organizador"
+    },
+    {
+      "id": "dep-est-sys-1",
+      "text": "Inscrever em Evento",
+      "type": "istar.Task",
+      "x": 465,
+      "y": 430,
+      "source": "act-estudante",
+      "target": "act-sistema"
+    },
+    {
+      "id": "dep-sys-est-1",
+      "text": "Certificado Digital",
+      "type": "istar.Resource",
+      "x": 465,
+      "y": 480,
+      "source": "act-estudante",
+      "target": "act-sistema"
+    },
+    {
+      "id": "dep-est-sys-2",
+      "text": "Validação Automática de AAC",
+      "type": "istar.Goal",
+      "x": 465,
+      "y": 550,
+      "source": "act-estudante",
+      "target": "act-sistema"
+    },
+    {
+      "id": "dep-sys-sigaa-1",
+      "text": "Registrar Horas AAC",
+      "type": "istar.Task",
+      "x": 730,
+      "y": 660,
+      "source": "act-sistema",
+      "target": "act-sigaa"
+    },
+    {
+      "id": "dep-org-infra-1",
+      "text": "Aprovação de Espaço Digital",
+      "type": "istar.Goal",
+      "x": 950,
+      "y": 150,
+      "source": "act-organizador",
+      "target": "act-infra"
+    },
+    {
+      "id": "dep-com-sys-1",
+      "text": "Visualizar Eventos Abertos",
+      "type": "istar.Goal",
+      "x": 950,
+      "y": 450,
+      "source": "act-comunidade",
+      "target": "act-sistema"
+    }
+  ],
+  "links": [
+    {
+      "id": "link-1",
+      "type": "istar.AndRefinementLink",
+      "source": "org-t1",
+      "target": "org-g1"
+    },
+    {
+      "id": "link-2",
+      "type": "istar.AndRefinementLink",
+      "source": "org-t2",
+      "target": "org-t1"
+    },
+    {
+      "id": "link-3",
+      "type": "istar.AndRefinementLink",
+      "source": "org-t3",
+      "target": "org-t1"
+    },
+    {
+      "id": "link-4",
+      "type": "istar.AndRefinementLink",
+      "source": "est-t1",
+      "target": "est-g1"
+    },
+    {
+      "id": "link-5",
+      "type": "istar.AndRefinementLink",
+      "source": "est-t2",
+      "target": "est-g1"
+    },
+    {
+      "id": "link-6",
+      "type": "istar.AndRefinementLink",
+      "source": "est-t3",
+      "target": "est-g2"
+    },
+    {
+      "id": "link-7",
+      "type": "istar.AndRefinementLink",
+      "source": "sys-t1",
+      "target": "sys-g1"
+    },
+    {
+      "id": "link-8",
+      "type": "istar.AndRefinementLink",
+      "source": "sys-t2",
+      "target": "sys-g1"
+    },
+    {
+      "id": "link-9",
+      "type": "istar.AndRefinementLink",
+      "source": "sys-t3",
+      "target": "sys-g1"
+    },
+    {
+      "id": "link-10",
+      "type": "istar.AndRefinementLink",
+      "source": "sys-t4",
+      "target": "sys-g1"
+    },
+    {
+      "id": "link-11",
+      "type": "istar.QualificationLink",
+      "source": "sys-q1",
+      "target": "sys-t1"
+    },
+    {
+      "id": "link-12",
+      "type": "istar.AndRefinementLink",
+      "source": "sigaa-t1",
+      "target": "sigaa-g1"
+    },
+    {
+      "id": "link-13",
+      "type": "istar.AndRefinementLink",
+      "source": "infra-t1",
+      "target": "infra-g1"
+    },
+    {
+      "id": "link-14",
+      "type": "istar.AndRefinementLink",
+      "source": "com-t1",
+      "target": "com-g1"
+    }
+  ],
+  "display": {
+    "act-organizador": {
+      "collapsed": false
+    },
+    "act-estudante": {
+      "collapsed": false
+    },
+    "act-sistema": {
+      "collapsed": false
+    },
+    "act-sigaa": {
+      "collapsed": false
+    },
+    "act-infra": {
+      "collapsed": false
+    },
+    "act-comunidade": {
+      "collapsed": false
+    }
+  },
+  "tool": "pistar.2.1.0",
+  "istar": "2.0",
+  "saveDate": "Fri, 02 Oct 2026 14:30:00 GMT",
+  "diagram": {
+    "width": 1500,
+    "height": 1100,
+    "customProperties": {
+      "Description": "Modelo SR (TO-BE) - Centralização via Sistema de Gestão de Eventos"
+    }
+  }
+}
