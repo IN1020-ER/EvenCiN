@@ -4,77 +4,133 @@
       "id": "act-org",
       "text": "Organizador",
       "type": "istar.Role",
-      "x": 480,
-      "y": 150,
-      "nodes": []
-    },
-    {
-      "id": "act-est",
-      "text": "Estudante",
-      "type": "istar.Role",
-      "x": 150,
-      "y": 400,
+      "x": 206,
+      "y": 440,
       "nodes": []
     },
     {
       "id": "act-sys",
       "text": "Sistema de Gestão de Eventos",
       "type": "istar.Actor",
-      "x": 480,
-      "y": 400,
+      "x": 736.3503872760075,
+      "y": 576.8591628369247,
       "nodes": []
     },
     {
-      "id": "act-infra",
-      "text": "Gestão Infraestrutura",
-      "type": "istar.Actor",
-      "x": 800,
-      "y": 150,
+      "id": "act-est",
+      "text": "Estudante",
+      "type": "istar.Role",
+      "x": 406,
+      "y": 1020,
       "nodes": []
     },
     {
       "id": "act-com",
       "text": "Comunidade Externa",
       "type": "istar.Agent",
-      "x": 800,
-      "y": 400,
+      "x": 1345,
+      "y": 754,
+      "nodes": []
+    },
+    {
+      "id": "act-infra",
+      "text": "Gestão Infraestrutura",
+      "type": "istar.Actor",
+      "x": 739,
+      "y": 54,
       "nodes": []
     },
     {
       "id": "act-sigaa",
       "text": "SIGAA",
       "type": "istar.Actor",
-      "x": 480,
-      "y": 650,
+      "x": 1136,
+      "y": 1078,
+      "nodes": []
+    },
+    {
+      "id": "c7642ba9-bce3-4252-a58b-8aa504eef75c",
+      "text": "Assessoria de Comunicação",
+      "type": "istar.Actor",
+      "x": 1247,
+      "y": 352,
+      "nodes": []
+    },
+    {
+      "id": "88051a03-32b9-4eae-9de3-4e742f6ec3a8",
+      "text": "Professor",
+      "type": "istar.Actor",
+      "x": 130,
+      "y": 568,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": []
+    },
+    {
+      "id": "6d374c9f-5396-4f39-bcc0-c40befd621b1",
+      "text": "Empresa",
+      "type": "istar.Actor",
+      "x": 94,
+      "y": 427,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": []
+    },
+    {
+      "id": "9799048e-493a-4230-9a3b-df73a91afbf8",
+      "text": "Liga Acadêmica",
+      "type": "istar.Actor",
+      "x": 164,
+      "y": 303,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": []
+    },
+    {
+      "id": "0e882c86-d2c3-4820-b05a-cece37dad367",
+      "text": "Graduação",
+      "type": "istar.Role",
+      "x": 405.3914523548,
+      "y": 1173.1442343294043,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": []
+    },
+    {
+      "id": "2f90ff1f-ec93-4465-82a7-d8a5adfb628f",
+      "text": "Pós-Graduação",
+      "type": "istar.Role",
+      "x": 251.28291213633315,
+      "y": 989.1590234224673,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": []
+    },
+    {
+      "id": "9fee9e9f-89ff-45e7-aedc-58c07535af7f",
+      "text": "Ensino",
+      "type": "istar.Actor",
+      "x": 1281,
+      "y": 1092,
+      "customProperties": {
+        "Description": ""
+      },
       "nodes": []
     }
   ],
   "orphans": [],
   "dependencies": [
     {
-      "id": "dep-1",
-      "text": "Automatizar Gestão do Evento",
-      "type": "istar.Goal",
-      "x": 480,
-      "y": 275,
-      "source": "act-org",
-      "target": "act-sys"
-    },
-    {
-      "id": "dep-2",
-      "text": "Lista de Presença Digital",
-      "type": "istar.Resource",
-      "x": 560,
-      "y": 275,
-      "source": "act-org",
-      "target": "act-sys"
-    },
-    {
       "id": "dep-3",
-      "text": "Inscrever em Evento",
+      "text": "Inscrever-se em Evento",
       "type": "istar.Task",
-      "x": 315,
-      "y": 380,
+      "x": 589,
+      "y": 845,
       "source": "act-est",
       "target": "act-sys"
     },
@@ -82,86 +138,1059 @@
       "id": "dep-4",
       "text": "Certificado Digital",
       "type": "istar.Resource",
-      "x": 315,
-      "y": 430,
+      "x": 657,
+      "y": 1032,
       "source": "act-est",
       "target": "act-sys"
-    },
-    {
-      "id": "dep-5",
-      "text": "Inscrição Ágil e Segura",
-      "type": "istar.Quality",
-      "x": 315,
-      "y": 330,
-      "source": "act-est",
-      "target": "act-sys"
-    },
-    {
-      "id": "dep-6",
-      "text": "Validação Automática de AAC",
-      "type": "istar.Goal",
-      "x": 315,
-      "y": 480,
-      "source": "act-est",
-      "target": "act-sys"
-    },
-    {
-      "id": "dep-7",
-      "text": "Aprovação de Espaço",
-      "type": "istar.Goal",
-      "x": 640,
-      "y": 150,
-      "source": "act-org",
-      "target": "act-infra"
     },
     {
       "id": "dep-8",
       "text": "Visualizar Eventos Abertos",
       "type": "istar.Goal",
-      "x": 640,
-      "y": 400,
+      "x": 1209,
+      "y": 573,
       "source": "act-com",
       "target": "act-sys"
     },
     {
-      "id": "dep-9",
-      "text": "Registrar Horas AAC Automaticamente",
-      "type": "istar.Task",
-      "x": 480,
-      "y": 525,
+      "id": "66642a68-e3f4-4b11-a287-6902d074edd6",
+      "text": "Evento bem avaliado",
+      "type": "istar.Quality",
+      "x": 1077,
+      "y": 640,
       "source": "act-sys",
+      "target": "act-com"
+    },
+    {
+      "id": "5190a213-afea-4635-8ecd-585e8c2de0f8",
+      "text": "Evento Bem Avaliado",
+      "type": "istar.Quality",
+      "x": 513,
+      "y": 870,
+      "source": "act-sys",
+      "target": "act-est"
+    },
+    {
+      "id": "bf7950ab-fc42-4fd8-b219-c98358b709a8",
+      "text": "Avaliar evento",
+      "type": "istar.Task",
+      "x": 1295,
+      "y": 531,
+      "source": "act-sys",
+      "target": "act-com"
+    },
+    {
+      "id": "b2062275-24e6-4af0-ac78-c0eaf7575b77",
+      "text": "Gerenciar Eventos",
+      "type": "istar.Goal",
+      "x": 914,
+      "y": 431,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "c7642ba9-bce3-4252-a58b-8aa504eef75c",
+      "target": "act-sys"
+    },
+    {
+      "id": "7c804f17-d82c-4e5d-a969-c31aff5c2438",
+      "text": "Emitir Lista de Inscritos",
+      "type": "istar.Task",
+      "x": 397,
+      "y": 566,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-org",
+      "target": "act-sys"
+    },
+    {
+      "id": "951aaa38-1cde-4f80-b07b-cfed7e97794b",
+      "text": "Consultar Presença de Inscritos",
+      "type": "istar.Task",
+      "x": 303,
+      "y": 604,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-org",
+      "target": "act-sys"
+    },
+    {
+      "id": "592abcba-79f0-4dea-a75f-11b8a9e422ed",
+      "text": "Quitar horas de AAC",
+      "type": "istar.Goal",
+      "x": 386,
+      "y": 854,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-est",
+      "target": "act-sys"
+    },
+    {
+      "id": "cb4657b3-659e-4fa0-853b-d7fa4c108bbf",
+      "text": "Realizar inscrição no evento",
+      "type": "istar.Task",
+      "x": 1028,
+      "y": 691,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-com",
+      "target": "act-sys"
+    },
+    {
+      "id": "27057277-80f5-43b5-b954-0010c5570434",
+      "text": "Emitir Certificado Digital",
+      "type": "istar.Task",
+      "x": 1070,
+      "y": 793,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-com",
+      "target": "act-sys"
+    },
+    {
+      "id": "846bb381-9e3a-4c30-bc8e-8070e2c6290a",
+      "text": "Criar Evento no sistema",
+      "type": "istar.Task",
+      "x": 682,
+      "y": 299,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-infra",
+      "target": "act-sys"
+    },
+    {
+      "id": "781fe5e2-80cb-4e6c-9a2a-0dc7fbb16abd",
+      "text": "Receber Notificação de Evento Criado",
+      "type": "istar.Goal",
+      "x": 542,
+      "y": 374,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-org",
+      "target": "act-sys"
+    },
+    {
+      "id": "39aca2d6-dfa8-48a7-a39c-83631683cf02",
+      "text": "Receber Notificação para Divulgação",
+      "type": "istar.Task",
+      "x": 968,
+      "y": 472,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "c7642ba9-bce3-4252-a58b-8aa504eef75c",
+      "target": "act-sys"
+    },
+    {
+      "id": "6d453014-b485-4a4b-9c7b-854378943898",
+      "text": "Atualizar horas AAC no SIGAA",
+      "type": "istar.Task",
+      "x": 828,
+      "y": 1105,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-sys",
+      "target": "act-sigaa"
+    },
+    {
+      "id": "e843de78-6e17-4c28-9d3a-292c664b27fb",
+      "text": "Dados Pessoais",
+      "type": "istar.Resource",
+      "x": 1005,
+      "y": 741,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-sys",
+      "target": "act-com"
+    },
+    {
+      "id": "82a97213-2ddd-424e-be0d-14e76b8ba6aa",
+      "text": "Controlar Divulgação de Evento",
+      "type": "istar.Goal",
+      "x": 901,
+      "y": 371,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "c7642ba9-bce3-4252-a58b-8aa504eef75c",
+      "target": "act-sys"
+    },
+    {
+      "id": "9a637214-369f-4be4-a134-8881cafa47d3",
+      "text": "Dados de Divulgação do Evento",
+      "type": "istar.Resource",
+      "x": 1036,
+      "y": 519,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-sys",
+      "target": "c7642ba9-bce3-4252-a58b-8aa504eef75c"
+    },
+    {
+      "id": "9f028191-7161-45f8-9762-bf3a4653d77f",
+      "text": "Dados do Evento",
+      "type": "istar.Resource",
+      "x": 932,
+      "y": 237,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-infra",
+      "target": "act-sys"
+    },
+    {
+      "id": "bd3e7aaa-e586-4463-ba4c-ce2f42878a7d",
+      "text": "Segura",
+      "type": "istar.Quality",
+      "x": 1053,
+      "y": 914,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-sys",
+      "target": "act-sigaa"
+    },
+    {
+      "id": "c11741f3-f9a4-459b-ae48-df24d075bba3",
+      "text": "Rapidez",
+      "type": "istar.Quality",
+      "x": 883,
+      "y": 1034,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-sys",
+      "target": "act-sigaa"
+    },
+    {
+      "id": "38c5eeaf-4fbc-46c4-9edb-504d45bcf41e",
+      "text": "Disponibilidade",
+      "type": "istar.Quality",
+      "x": 300,
+      "y": 806,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-est",
+      "target": "act-sys"
+    },
+    {
+      "id": "852d511d-626c-4e8c-bff5-f766010dd348",
+      "text": "Rápido",
+      "type": "istar.Quality",
+      "x": 616,
+      "y": 925,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-est",
+      "target": "act-sys"
+    },
+    {
+      "id": "df571cfd-ab20-4d8d-b932-fba4d26634be",
+      "text": "Disponibilidade",
+      "type": "istar.Quality",
+      "x": 1090,
+      "y": 844,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-com",
+      "target": "act-sys"
+    },
+    {
+      "id": "92f5b2ca-124f-4bf1-bdd7-b5da93e03efe",
+      "text": "Rápido",
+      "type": "istar.Quality",
+      "x": 1141,
+      "y": 605,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-com",
+      "target": "act-sys"
+    },
+    {
+      "id": "16663844-375f-4a5b-b76a-336720a6e76f",
+      "text": "Consultar Eventos para  comunidade CiN",
+      "type": "istar.Task",
+      "x": 479,
+      "y": 815,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-est",
+      "target": "act-sys"
+    },
+    {
+      "id": "bb446f18-a4e7-4d6f-a8cb-a6e6e2513408",
+      "text": "Rápido",
+      "type": "istar.Quality",
+      "x": 416,
+      "y": 267,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-org",
+      "target": "act-infra"
+    },
+    {
+      "id": "7c0a9b4e-52a2-4de9-aa03-e8d6af0baa07",
+      "text": "Controlar inscrições",
+      "type": "istar.Goal",
+      "x": 227,
+      "y": 666,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-org",
+      "target": "act-sys"
+    },
+    {
+      "id": "62b3c4c6-6116-4691-bd21-db6d62617f4e",
+      "text": "Saber Disponiblidade do Espaço",
+      "type": "istar.Goal",
+      "x": 392,
+      "y": 222,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-org",
+      "target": "act-infra"
+    },
+    {
+      "id": "c29cd17a-0773-4a74-a023-e3adda8696ce",
+      "text": "Rapidez",
+      "type": "istar.Quality",
+      "x": 745,
+      "y": 342,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-infra",
+      "target": "act-sys"
+    },
+    {
+      "id": "d7e3c582-60c2-4c19-85ab-4121bf21ec04",
+      "text": "Disponiblidade",
+      "type": "istar.Quality",
+      "x": 835,
+      "y": 275,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-infra",
+      "target": "act-sys"
+    },
+    {
+      "id": "688c78d6-680a-4b89-8e00-462bcd78db14",
+      "text": "Consultar Disponiblidade do Espaço",
+      "type": "istar.Goal",
+      "x": 597,
+      "y": 251,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-infra",
+      "target": "act-sys"
+    },
+    {
+      "id": "d3a561ae-9918-46bc-b6b1-c1ca27b680cd",
+      "text": "Identificar disponibilidade do espaço",
+      "type": "istar.Goal",
+      "x": 433,
+      "y": 351,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-org",
+      "target": "act-sys"
+    },
+    {
+      "id": "c53c5dc6-6b3b-45a4-beec-dd3640057c72",
+      "text": "Rápidez",
+      "type": "istar.Quality",
+      "x": 446,
+      "y": 410,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-org",
+      "target": "act-sys"
+    },
+    {
+      "id": "74de1c59-72da-4707-9173-2936569605e0",
+      "text": "Dados do Evento",
+      "type": "istar.Resource",
+      "x": 480,
+      "y": 483,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-sys",
+      "target": "act-org"
+    },
+    {
+      "id": "d90bc9fa-bac2-4fd8-a7f0-7ef12a523697",
+      "text": "CPF",
+      "type": "istar.Resource",
+      "x": 889,
+      "y": 949,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-sigaa",
+      "target": "act-sys"
+    },
+    {
+      "id": "01c3f375-9c7f-4fe1-9d7b-5e391ac5a3ae",
+      "text": "Dependum",
+      "type": "istar.Task",
+      "x": 308,
+      "y": 162,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-org",
+      "target": "act-infra"
+    },
+    {
+      "id": "5dd783df-0f24-4885-827d-298220a099a4",
+      "text": "Criar Evento",
+      "type": "istar.Task",
+      "x": 477,
+      "y": 528,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-org",
+      "target": "act-sys"
+    },
+    {
+      "id": "a9f768ac-7592-4228-989a-b7dd1cc7271c",
+      "text": "Gerenciar Horas AAC",
+      "type": "istar.Goal",
+      "x": 956,
+      "y": 909,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-sys",
+      "target": "act-sigaa"
+    },
+    {
+      "id": "cf58de00-d898-4c51-a12b-6d43b096b6d7",
+      "text": "Dados do Evento",
+      "type": "istar.Resource",
+      "x": 508,
+      "y": 282,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "act-infra",
+      "target": "act-org"
+    }
+  ],
+  "links": [
+    {
+      "id": "d6751fbc-7ee6-40fb-8998-a597913d1304",
+      "type": "istar.DependencyLink",
+      "source": "act-infra",
+      "target": "cf58de00-d898-4c51-a12b-6d43b096b6d7"
+    },
+    {
+      "id": "2b25aa12-b36f-4a65-ac51-c2bcd1fa198b",
+      "type": "istar.DependencyLink",
+      "source": "cf58de00-d898-4c51-a12b-6d43b096b6d7",
+      "target": "act-org"
+    },
+    {
+      "id": "036e3f04-2843-4f81-9c91-c7bef139985f",
+      "type": "istar.DependencyLink",
+      "source": "a9f768ac-7592-4228-989a-b7dd1cc7271c",
+      "target": "act-sigaa"
+    },
+    {
+      "id": "007721a9-42e3-4306-a42b-460622c19cf2",
+      "type": "istar.DependencyLink",
+      "source": "act-sys",
+      "target": "a9f768ac-7592-4228-989a-b7dd1cc7271c"
+    },
+    {
+      "id": "d3d284cc-3cb6-4917-8346-a283db2aeecd",
+      "type": "istar.DependencyLink",
+      "source": "5dd783df-0f24-4885-827d-298220a099a4",
+      "target": "act-sys"
+    },
+    {
+      "id": "cf4db3af-212c-4328-b9f6-3c6d589ac09f",
+      "type": "istar.DependencyLink",
+      "source": "act-org",
+      "target": "5dd783df-0f24-4885-827d-298220a099a4"
+    },
+    {
+      "id": "c36bd5c5-aed3-4ce1-aedc-11e631c49ecd",
+      "type": "istar.DependencyLink",
+      "source": "01c3f375-9c7f-4fe1-9d7b-5e391ac5a3ae",
+      "target": "act-infra"
+    },
+    {
+      "id": "f4724806-c353-4a3d-a744-03a94646732a",
+      "type": "istar.DependencyLink",
+      "source": "act-org",
+      "target": "01c3f375-9c7f-4fe1-9d7b-5e391ac5a3ae"
+    },
+    {
+      "id": "7628083e-e438-4541-9452-fc829fb6200f",
+      "type": "istar.DependencyLink",
+      "source": "d90bc9fa-bac2-4fd8-a7f0-7ef12a523697",
+      "target": "act-sys"
+    },
+    {
+      "id": "2dc81ba1-90b7-4ba9-aee7-543e225895b6",
+      "type": "istar.DependencyLink",
+      "source": "act-sigaa",
+      "target": "d90bc9fa-bac2-4fd8-a7f0-7ef12a523697"
+    },
+    {
+      "id": "88f687fe-b833-48b8-a1d2-286df36e64b7",
+      "type": "istar.DependencyLink",
+      "source": "74de1c59-72da-4707-9173-2936569605e0",
+      "target": "act-org"
+    },
+    {
+      "id": "e31b0b89-cd2d-49f6-a98f-63f542bac0bf",
+      "type": "istar.DependencyLink",
+      "source": "act-sys",
+      "target": "74de1c59-72da-4707-9173-2936569605e0"
+    },
+    {
+      "id": "c6ab3d77-2186-40e5-b70e-427d15ce3c09",
+      "type": "istar.DependencyLink",
+      "source": "c53c5dc6-6b3b-45a4-beec-dd3640057c72",
+      "target": "act-sys"
+    },
+    {
+      "id": "fd5c1a12-ae0f-4564-af91-56ec756a5970",
+      "type": "istar.DependencyLink",
+      "source": "act-org",
+      "target": "c53c5dc6-6b3b-45a4-beec-dd3640057c72"
+    },
+    {
+      "id": "8f95caf2-7a25-461a-b045-8164002ed72f",
+      "type": "istar.DependencyLink",
+      "source": "d3a561ae-9918-46bc-b6b1-c1ca27b680cd",
+      "target": "act-sys"
+    },
+    {
+      "id": "5d5fba6f-000c-4e48-94f5-43faaf3be792",
+      "type": "istar.DependencyLink",
+      "source": "act-org",
+      "target": "d3a561ae-9918-46bc-b6b1-c1ca27b680cd"
+    },
+    {
+      "id": "cf27a2b1-fa10-4c89-a13f-d9782f102c0e",
+      "type": "istar.DependencyLink",
+      "source": "688c78d6-680a-4b89-8e00-462bcd78db14",
+      "target": "act-sys"
+    },
+    {
+      "id": "23c3597f-bedb-4c54-8c43-e6adcbaaa0b5",
+      "type": "istar.DependencyLink",
+      "source": "act-infra",
+      "target": "688c78d6-680a-4b89-8e00-462bcd78db14"
+    },
+    {
+      "id": "1ed55d89-8893-469e-a203-2ba5fa57574a",
+      "type": "istar.DependencyLink",
+      "source": "d7e3c582-60c2-4c19-85ab-4121bf21ec04",
+      "target": "act-sys"
+    },
+    {
+      "id": "bc35c95f-e177-40c8-bfe8-e3d440888f08",
+      "type": "istar.DependencyLink",
+      "source": "act-infra",
+      "target": "d7e3c582-60c2-4c19-85ab-4121bf21ec04"
+    },
+    {
+      "id": "0fccb042-e1db-461c-bbb5-46a1fac254d0",
+      "type": "istar.DependencyLink",
+      "source": "c29cd17a-0773-4a74-a023-e3adda8696ce",
+      "target": "act-sys"
+    },
+    {
+      "id": "97ebc48b-7d9f-487f-8173-4fef2ccafbbe",
+      "type": "istar.DependencyLink",
+      "source": "act-infra",
+      "target": "c29cd17a-0773-4a74-a023-e3adda8696ce"
+    },
+    {
+      "id": "08db60db-4a71-45c9-a025-679bb1071399",
+      "type": "istar.DependencyLink",
+      "source": "62b3c4c6-6116-4691-bd21-db6d62617f4e",
+      "target": "act-infra"
+    },
+    {
+      "id": "cae72e95-62ce-4c7c-b001-07aeb0e17686",
+      "type": "istar.DependencyLink",
+      "source": "act-org",
+      "target": "62b3c4c6-6116-4691-bd21-db6d62617f4e"
+    },
+    {
+      "id": "25c73e8d-3b5b-4eed-a1e4-0d563c7c511d",
+      "type": "istar.DependencyLink",
+      "source": "7c0a9b4e-52a2-4de9-aa03-e8d6af0baa07",
+      "target": "act-sys"
+    },
+    {
+      "id": "99229ac6-3efe-4f58-bfd7-ffd404b2f9aa",
+      "type": "istar.DependencyLink",
+      "source": "act-org",
+      "target": "7c0a9b4e-52a2-4de9-aa03-e8d6af0baa07"
+    },
+    {
+      "id": "8879efb2-24e4-4307-b297-9c6c73d17ff8",
+      "type": "istar.DependencyLink",
+      "source": "bb446f18-a4e7-4d6f-a8cb-a6e6e2513408",
+      "target": "act-infra"
+    },
+    {
+      "id": "0c25b0dc-9eb5-4246-89ac-9ede1fd33f34",
+      "type": "istar.DependencyLink",
+      "source": "act-org",
+      "target": "bb446f18-a4e7-4d6f-a8cb-a6e6e2513408"
+    },
+    {
+      "id": "66292049-b626-46fe-90d4-733cf69c8e78",
+      "type": "istar.DependencyLink",
+      "source": "16663844-375f-4a5b-b76a-336720a6e76f",
+      "target": "act-sys"
+    },
+    {
+      "id": "d7f6669d-159e-4fb0-ba53-30ef2cf0e10d",
+      "type": "istar.DependencyLink",
+      "source": "act-est",
+      "target": "16663844-375f-4a5b-b76a-336720a6e76f"
+    },
+    {
+      "id": "41994c8c-f8f3-4db5-952d-1eff1102d33f",
+      "type": "istar.DependencyLink",
+      "source": "92f5b2ca-124f-4bf1-bdd7-b5da93e03efe",
+      "target": "act-sys"
+    },
+    {
+      "id": "8e3c7fc8-c9c9-4bb4-9cef-09f7aab5aac9",
+      "type": "istar.DependencyLink",
+      "source": "act-com",
+      "target": "92f5b2ca-124f-4bf1-bdd7-b5da93e03efe"
+    },
+    {
+      "id": "85ac07b7-1e04-4b05-a2dd-3f77831a2ebb",
+      "type": "istar.DependencyLink",
+      "source": "df571cfd-ab20-4d8d-b932-fba4d26634be",
+      "target": "act-sys"
+    },
+    {
+      "id": "7ca2dc66-0fc9-4387-a97a-e7a7225334cb",
+      "type": "istar.DependencyLink",
+      "source": "act-com",
+      "target": "df571cfd-ab20-4d8d-b932-fba4d26634be"
+    },
+    {
+      "id": "3d539835-776e-4e0e-a6bc-e7561ddc2306",
+      "type": "istar.DependencyLink",
+      "source": "852d511d-626c-4e8c-bff5-f766010dd348",
+      "target": "act-sys"
+    },
+    {
+      "id": "8a5c0946-2f2e-4f09-8f29-3161854541b3",
+      "type": "istar.DependencyLink",
+      "source": "act-est",
+      "target": "852d511d-626c-4e8c-bff5-f766010dd348"
+    },
+    {
+      "id": "be9a48e0-6ddc-4fda-b513-6c5d659cc3dc",
+      "type": "istar.DependencyLink",
+      "source": "38c5eeaf-4fbc-46c4-9edb-504d45bcf41e",
+      "target": "act-sys"
+    },
+    {
+      "id": "4b8514ca-db83-4f87-9bb0-845ef94095f2",
+      "type": "istar.DependencyLink",
+      "source": "act-est",
+      "target": "38c5eeaf-4fbc-46c4-9edb-504d45bcf41e"
+    },
+    {
+      "id": "6c2f67e7-adb4-4742-adee-576504f808f9",
+      "type": "istar.DependencyLink",
+      "source": "c11741f3-f9a4-459b-ae48-df24d075bba3",
+      "target": "act-sigaa"
+    },
+    {
+      "id": "02f639c1-3264-40c8-bad5-d49605f46f88",
+      "type": "istar.DependencyLink",
+      "source": "act-sys",
+      "target": "c11741f3-f9a4-459b-ae48-df24d075bba3"
+    },
+    {
+      "id": "001deb8f-6d5e-4090-9f77-06601a70077a",
+      "type": "istar.DependencyLink",
+      "source": "bd3e7aaa-e586-4463-ba4c-ce2f42878a7d",
+      "target": "act-sigaa"
+    },
+    {
+      "id": "4c7d9301-0801-4a32-b5b7-2c56fc35f2d5",
+      "type": "istar.DependencyLink",
+      "source": "act-sys",
+      "target": "bd3e7aaa-e586-4463-ba4c-ce2f42878a7d"
+    },
+    {
+      "id": "00512e37-f41c-49d0-8141-87813b2f525c",
+      "type": "istar.DependencyLink",
+      "source": "9f028191-7161-45f8-9762-bf3a4653d77f",
+      "target": "act-sys"
+    },
+    {
+      "id": "6a1c72ee-d990-42e9-b30c-1ac87958e8ca",
+      "type": "istar.DependencyLink",
+      "source": "act-infra",
+      "target": "9f028191-7161-45f8-9762-bf3a4653d77f"
+    },
+    {
+      "id": "094e270c-0594-409b-b9f5-89b7153f9d0d",
+      "type": "istar.DependencyLink",
+      "source": "9a637214-369f-4be4-a134-8881cafa47d3",
+      "target": "c7642ba9-bce3-4252-a58b-8aa504eef75c"
+    },
+    {
+      "id": "4b1408bb-3d7c-484b-919a-9dab7e12c986",
+      "type": "istar.DependencyLink",
+      "source": "act-sys",
+      "target": "9a637214-369f-4be4-a134-8881cafa47d3"
+    },
+    {
+      "id": "2d457848-d082-4d80-95ea-1b70023159de",
+      "type": "istar.DependencyLink",
+      "source": "82a97213-2ddd-424e-be0d-14e76b8ba6aa",
+      "target": "act-sys"
+    },
+    {
+      "id": "064f80b6-6155-4253-b576-85cb096b8899",
+      "type": "istar.DependencyLink",
+      "source": "c7642ba9-bce3-4252-a58b-8aa504eef75c",
+      "target": "82a97213-2ddd-424e-be0d-14e76b8ba6aa"
+    },
+    {
+      "id": "4bef8f54-000d-4549-9f0a-a04feff41f75",
+      "type": "istar.DependencyLink",
+      "source": "e843de78-6e17-4c28-9d3a-292c664b27fb",
+      "target": "act-com"
+    },
+    {
+      "id": "cc32d433-5bca-4151-829b-6dcf9d03bbb8",
+      "type": "istar.DependencyLink",
+      "source": "act-sys",
+      "target": "e843de78-6e17-4c28-9d3a-292c664b27fb"
+    },
+    {
+      "id": "010a4a98-294f-4cfd-8d08-f886e148d1cd",
+      "type": "istar.DependencyLink",
+      "source": "6d453014-b485-4a4b-9c7b-854378943898",
+      "target": "act-sigaa"
+    },
+    {
+      "id": "4cec43c3-b70c-434d-b397-a0493a85bc65",
+      "type": "istar.DependencyLink",
+      "source": "act-sys",
+      "target": "6d453014-b485-4a4b-9c7b-854378943898"
+    },
+    {
+      "id": "4479de43-65b9-46cc-8741-4057ee2d4c61",
+      "type": "istar.DependencyLink",
+      "source": "39aca2d6-dfa8-48a7-a39c-83631683cf02",
+      "target": "act-sys"
+    },
+    {
+      "id": "a22c14a8-73c4-4791-a5d3-0dd3603208ed",
+      "type": "istar.DependencyLink",
+      "source": "c7642ba9-bce3-4252-a58b-8aa504eef75c",
+      "target": "39aca2d6-dfa8-48a7-a39c-83631683cf02"
+    },
+    {
+      "id": "3b42b3d0-a63a-43c1-b40a-69089a007579",
+      "type": "istar.DependencyLink",
+      "source": "781fe5e2-80cb-4e6c-9a2a-0dc7fbb16abd",
+      "target": "act-sys"
+    },
+    {
+      "id": "6b77f313-f7da-4046-a29f-9936d60e37ec",
+      "type": "istar.DependencyLink",
+      "source": "act-org",
+      "target": "781fe5e2-80cb-4e6c-9a2a-0dc7fbb16abd"
+    },
+    {
+      "id": "8c1031c6-379b-4cc9-9593-a9420e6f34b4",
+      "type": "istar.DependencyLink",
+      "source": "846bb381-9e3a-4c30-bc8e-8070e2c6290a",
+      "target": "act-sys"
+    },
+    {
+      "id": "4eeddf57-f2b4-43fd-927e-5937e49ba4a5",
+      "type": "istar.DependencyLink",
+      "source": "act-infra",
+      "target": "846bb381-9e3a-4c30-bc8e-8070e2c6290a"
+    },
+    {
+      "id": "817554c4-c052-48d9-89ea-477dd7ccea1f",
+      "type": "istar.DependencyLink",
+      "source": "27057277-80f5-43b5-b954-0010c5570434",
+      "target": "act-sys"
+    },
+    {
+      "id": "77e26626-fa3b-433e-b457-6656baf2dd1c",
+      "type": "istar.DependencyLink",
+      "source": "act-com",
+      "target": "27057277-80f5-43b5-b954-0010c5570434"
+    },
+    {
+      "id": "7bb615f8-8d68-44ae-b5c2-e3b031ef86c3",
+      "type": "istar.DependencyLink",
+      "source": "cb4657b3-659e-4fa0-853b-d7fa4c108bbf",
+      "target": "act-sys"
+    },
+    {
+      "id": "bd71cc22-9e2c-4d20-a85f-d5094e87d801",
+      "type": "istar.DependencyLink",
+      "source": "act-com",
+      "target": "cb4657b3-659e-4fa0-853b-d7fa4c108bbf"
+    },
+    {
+      "id": "cc0737b9-8439-453b-bd63-4e893eea5ee0",
+      "type": "istar.DependencyLink",
+      "source": "592abcba-79f0-4dea-a75f-11b8a9e422ed",
+      "target": "act-sys"
+    },
+    {
+      "id": "b665af3a-a763-4b39-8a9d-ec69d7bbf8e5",
+      "type": "istar.DependencyLink",
+      "source": "act-est",
+      "target": "592abcba-79f0-4dea-a75f-11b8a9e422ed"
+    },
+    {
+      "id": "e731301c-ed1a-46d7-9ca9-8faefa34f1f1",
+      "type": "istar.DependencyLink",
+      "source": "951aaa38-1cde-4f80-b07b-cfed7e97794b",
+      "target": "act-sys"
+    },
+    {
+      "id": "19ac9e98-e56b-454f-be71-5e51e1c12b7b",
+      "type": "istar.DependencyLink",
+      "source": "act-org",
+      "target": "951aaa38-1cde-4f80-b07b-cfed7e97794b"
+    },
+    {
+      "id": "17293f9d-4020-4dae-8292-750450724dfc",
+      "type": "istar.DependencyLink",
+      "source": "7c804f17-d82c-4e5d-a969-c31aff5c2438",
+      "target": "act-sys"
+    },
+    {
+      "id": "73c78a9a-5664-4e73-98e3-a813aacb4e82",
+      "type": "istar.DependencyLink",
+      "source": "act-org",
+      "target": "7c804f17-d82c-4e5d-a969-c31aff5c2438"
+    },
+    {
+      "id": "c6f86bad-c288-41bd-9fb7-ac89dedafdcd",
+      "type": "istar.DependencyLink",
+      "source": "b2062275-24e6-4af0-ac78-c0eaf7575b77",
+      "target": "act-sys"
+    },
+    {
+      "id": "0056c668-63a2-46f0-ac9c-b993b07612fd",
+      "type": "istar.DependencyLink",
+      "source": "c7642ba9-bce3-4252-a58b-8aa504eef75c",
+      "target": "b2062275-24e6-4af0-ac78-c0eaf7575b77"
+    },
+    {
+      "id": "991f4bbf-f49d-4d7d-942d-cf7a3375d4b8",
+      "type": "istar.DependencyLink",
+      "source": "bf7950ab-fc42-4fd8-b219-c98358b709a8",
+      "target": "act-com"
+    },
+    {
+      "id": "2e6c509e-2db9-4825-a756-4d3fe98f59d4",
+      "type": "istar.DependencyLink",
+      "source": "act-sys",
+      "target": "bf7950ab-fc42-4fd8-b219-c98358b709a8"
+    },
+    {
+      "id": "14e6db78-4292-496a-8d02-c9d86c6b75ad",
+      "type": "istar.DependencyLink",
+      "source": "5190a213-afea-4635-8ecd-585e8c2de0f8",
+      "target": "act-est"
+    },
+    {
+      "id": "2ddc65d7-c2a6-4cfe-89ec-f9e01f66897b",
+      "type": "istar.DependencyLink",
+      "source": "act-sys",
+      "target": "5190a213-afea-4635-8ecd-585e8c2de0f8"
+    },
+    {
+      "id": "96ac6109-ec87-4a73-b09e-a11129889c53",
+      "type": "istar.DependencyLink",
+      "source": "66642a68-e3f4-4b11-a287-6902d074edd6",
+      "target": "act-com"
+    },
+    {
+      "id": "c61143c3-4d71-412e-8ab8-286ae8ca255e",
+      "type": "istar.DependencyLink",
+      "source": "act-sys",
+      "target": "66642a68-e3f4-4b11-a287-6902d074edd6"
+    },
+    {
+      "id": "a6a98bff-c423-45df-865d-51e350ae3c3b",
+      "type": "istar.DependencyLink",
+      "source": "dep-8",
+      "target": "act-sys"
+    },
+    {
+      "id": "2d9e3c8b-d9cf-4151-964b-673a40cef8a4",
+      "type": "istar.DependencyLink",
+      "source": "act-com",
+      "target": "dep-8"
+    },
+    {
+      "id": "0c96e6b5-68f8-4caf-87e6-5e37970d751d",
+      "type": "istar.DependencyLink",
+      "source": "dep-4",
+      "target": "act-sys"
+    },
+    {
+      "id": "b32c2f34-fc3c-40ab-a47b-d998361515b1",
+      "type": "istar.DependencyLink",
+      "source": "act-est",
+      "target": "dep-4"
+    },
+    {
+      "id": "df146371-0cae-43b6-9fe4-1bfdf9005261",
+      "type": "istar.DependencyLink",
+      "source": "dep-3",
+      "target": "act-sys"
+    },
+    {
+      "id": "0021e25d-054e-4757-ba68-026460067e0f",
+      "type": "istar.DependencyLink",
+      "source": "act-est",
+      "target": "dep-3"
+    },
+    {
+      "id": "a750455f-339e-4149-bcde-bec8ebabbe73",
+      "type": "istar.ParticipatesInLink",
+      "source": "88051a03-32b9-4eae-9de3-4e742f6ec3a8",
+      "target": "act-org"
+    },
+    {
+      "id": "0e155606-da8e-43f4-afe8-b3cadc15474e",
+      "type": "istar.ParticipatesInLink",
+      "source": "6d374c9f-5396-4f39-bcc0-c40befd621b1",
+      "target": "act-org"
+    },
+    {
+      "id": "e68162a7-23d8-4abd-823d-dca3ba935853",
+      "type": "istar.ParticipatesInLink",
+      "source": "9799048e-493a-4230-9a3b-df73a91afbf8",
+      "target": "act-org"
+    },
+    {
+      "id": "6094ae38-6623-487e-baf4-6a7586649864",
+      "type": "istar.IsALink",
+      "source": "0e882c86-d2c3-4820-b05a-cece37dad367",
+      "target": "act-est"
+    },
+    {
+      "id": "1062c197-5be5-4de1-9bde-a00bafe24ba2",
+      "type": "istar.IsALink",
+      "source": "2f90ff1f-ec93-4465-82a7-d8a5adfb628f",
+      "target": "act-est"
+    },
+    {
+      "id": "09d0cd45-6bb9-4e3b-959d-492b01bf40d8",
+      "type": "istar.ParticipatesInLink",
+      "source": "9fee9e9f-89ff-45e7-aedc-58c07535af7f",
       "target": "act-sigaa"
     }
   ],
-  "links": [],
   "display": {
-    "act-org": {
-      "collapsed": true
+    "16663844-375f-4a5b-b76a-336720a6e76f": {
+      "width": 101.60198974609375,
+      "height": 48.34381103515625
     },
-    "act-est": {
+    "d3d284cc-3cb6-4917-8346-a283db2aeecd": {
+      "vertices": [
+        {
+          "x": 525,
+          "y": 558
+        }
+      ]
+    },
+    "act-org": {
       "collapsed": true
     },
     "act-sys": {
       "collapsed": true
     },
-    "act-infra": {
+    "act-est": {
       "collapsed": true
     },
     "act-com": {
       "collapsed": true
     },
+    "act-infra": {
+      "collapsed": true
+    },
     "act-sigaa": {
+      "collapsed": true
+    },
+    "c7642ba9-bce3-4252-a58b-8aa504eef75c": {
+      "collapsed": true
+    },
+    "88051a03-32b9-4eae-9de3-4e742f6ec3a8": {
+      "collapsed": true
+    },
+    "6d374c9f-5396-4f39-bcc0-c40befd621b1": {
+      "collapsed": true
+    },
+    "9799048e-493a-4230-9a3b-df73a91afbf8": {
+      "collapsed": true
+    },
+    "0e882c86-d2c3-4820-b05a-cece37dad367": {
+      "collapsed": true
+    },
+    "2f90ff1f-ec93-4465-82a7-d8a5adfb628f": {
+      "collapsed": true
+    },
+    "9fee9e9f-89ff-45e7-aedc-58c07535af7f": {
       "collapsed": true
     }
   },
   "tool": "pistar.2.1.0",
   "istar": "2.0",
-  "saveDate": "Fri, 02 Oct 2026 14:23:00 GMT",
+  "saveDate": "Thu, 22 Oct 2026 13:58:25 GMT",
   "diagram": {
-    "width": 1000,
-    "height": 800,
+    "width": 1405,
+    "height": 1413,
     "customProperties": {
-      "Description": "Modelo SD (TO-BE) - Centralização via Sistema de Gestão de Eventos"
+      "Description": ""
     }
   }
 }
